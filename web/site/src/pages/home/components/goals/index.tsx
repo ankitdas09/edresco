@@ -27,7 +27,7 @@ const GoalsSection = () => {
         <div className="goals container">
             <Heading
                 text="Achieve your goals with us!"
-                maxWidth={600}
+                maxWidth={1300}
                 size="1.4rem"
                 fontWeight={700}
                 font={"Raleway"}

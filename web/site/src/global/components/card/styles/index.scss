@@ -30,20 +30,12 @@
 }
 @media screen and (max-width: 1014px) {
   .card-container{
-    justify-content: center;
+    justify-content: space-between;
   }
   .card{
     width: 200px !important;
   }
 }
-// @media screen and (max-width: 985px) {
-//   .card-container{
-//     justify-content: center;
-//   }
-//   .card{
-//     // width: 285px !important;
-//   }
-// }
 
 @media screen and (max-width: 800px) {
   .card-container{
