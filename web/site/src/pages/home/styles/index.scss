@@ -1,0 +1,19 @@
+*{
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  // font-family: 'Raleway', sans-serif;
+}
+.flex{
+  display: flex;
+}
+.justify-space{
+  justify-content: space-between;
+}
+.align-center{
+  align-items: center;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px;
+}
