@@ -1,10 +1,9 @@
-import React from "react";
-
+import "./styles/index.scss";
 interface PropTypes {
     amt: number;
 }
 const Space = (props: PropTypes) => {
-    return <div style={{ margin: props.amt }}></div>;
+    return <div className="space" style={{ margin: props.amt }}></div>;
 };
 
 export default Space;
