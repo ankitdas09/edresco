@@ -37,7 +37,16 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 934px) {
+  .card-container{
+    justify-content: space-between;
+  }
+  .card{
+    width: 195px !important;
+  }
+}
+
+@media screen and (max-width: 914px) {
   .card-container{
     justify-content: center;
   }

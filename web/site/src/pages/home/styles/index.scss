@@ -9,8 +9,14 @@
 .justify-space{
   justify-content: space-between;
 }
+.justify-right{
+  justify-content: end;
+}
 .justify-center{
   justify-content: center;
+}
+.p0{
+  padding: 0 !important;
 }
 .wrap{
   flex-wrap: wrap;
