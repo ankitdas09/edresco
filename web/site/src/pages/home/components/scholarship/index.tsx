@@ -1,4 +1,3 @@
-import Button from "../../../../global/components/btn";
 import "./styles/index.scss";
 const ScholarshipSection = () => {
     return (

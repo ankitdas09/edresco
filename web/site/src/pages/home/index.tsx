@@ -6,6 +6,7 @@ import GoalsSection from "./components/goals";
 import WhySection from "./components/why";
 import StartPrepSection from "./components/start-prep";
 import ScholarshipSection from "./components/scholarship";
+import Footer from "../../global/components/footer";
 interface PropTypes {
     width: number;
     height: number;
@@ -25,6 +26,8 @@ const HomePage = (props: PropTypes) => {
             <StartPrepSection />
             {props.width >= 600 ? <Space amt={100} /> : <Space amt={60} />}
             <ScholarshipSection />
+            {props.width >= 600 ? <Space amt={30} /> : <Space amt={15} />}
+            <Footer />
         </section>
     );
 };

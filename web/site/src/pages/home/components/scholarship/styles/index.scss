@@ -1,7 +1,7 @@
 .scholarship-section{
   cursor: pointer;  
   color: #fff !important;
-  background: url("scholarship-main.png");
+  background: url("../assets/scholarship-main.png");
   background-repeat: no-repeat;
   background-size: contain;
   // background-position: center;
@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 700px) {
   .scholarship-section{
-    background: url("scholarship-main-responsive.png");
+    background: url("../assets/scholarship-main-responsive.png");
     background-repeat: no-repeat;
     background-size: contain;
     // background-position: center;
