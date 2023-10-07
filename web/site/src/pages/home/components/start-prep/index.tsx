@@ -51,6 +51,7 @@ const StartPrepSection = () => {
                     type="filled"
                     bgColor="#0056B8"
                     fgColor="#fff"
+                    linkTo="courses"
                 />
             </div>
             <div className="start-prep-right">

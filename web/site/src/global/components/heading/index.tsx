@@ -7,6 +7,7 @@ interface PropTypes {
     font: "Raleway" | "PT Sans";
     padding?: string;
     color?: string;
+    letterSpacing?: number;
 }
 const Heading = (props: PropTypes) => {
     return (
@@ -19,6 +20,7 @@ const Heading = (props: PropTypes) => {
                 maxWidth: props.maxWidth,
                 fontSize: props.size,
                 padding: props.padding,
+                letterSpacing: props.letterSpacing ? props.letterSpacing : "",
             }}
         >
             {props.text}

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./styles/index.scss";
 
 interface PropTypes {
@@ -7,9 +8,11 @@ interface PropTypes {
     type: "filled" | "outlined";
     bgColor: string;
     fgColor: string;
+    linkTo?: string;
 }
 
 const Button = (props: PropTypes) => {
+    const navigate = useNavigate();
     return (
         <button
             className="btn"
@@ -22,6 +25,10 @@ const Button = (props: PropTypes) => {
                 borderRadius: 5,
                 fontWeight: 700,
                 cursor: "pointer",
+            }}
+            onClick={() => {
+                if (!props.linkTo) return;
+                navigate(props.linkTo);
             }}
         >
             {props.text}

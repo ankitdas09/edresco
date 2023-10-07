@@ -1,6 +1,8 @@
 import "./styles/index.scss";
 import Button from "../btn";
+import { Link, useLocation } from "react-router-dom";
 const NavBar = () => {
+    const location = useLocation();
     return (
         <nav>
             <div className="nav-flex">
@@ -9,11 +11,21 @@ const NavBar = () => {
                 </div>
                 <div className="nav-right">
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Courses</li>
-                        <li>Scholarship</li>
-                        <li>Contact</li>
+                        <li className={location.pathname === "/" ? "current-page" : ""}>
+                            <Link to={"/"}>Home</Link>
+                        </li>
+                        <li className={location.pathname === "/about" ? "current-page" : ""}>
+                            <Link to={"/"}>About</Link>
+                        </li>
+                        <li className={location.pathname === "/courses" ? "current-page" : ""}>
+                            <Link to={"/courses"}>Courses</Link>
+                        </li>
+                        <li className={location.pathname === "/scholarship" ? "current-page" : ""}>
+                            <Link to={"/"}>Scholarship</Link>
+                        </li>
+                        <li className={location.pathname === "/contact" ? "current-page" : ""}>
+                            <Link to={"/"}>Contact</Link>
+                        </li>
                         <li>
                             <Button
                                 text="Join Now!"

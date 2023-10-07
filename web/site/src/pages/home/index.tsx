@@ -7,6 +7,7 @@ import WhySection from "./components/why";
 import StartPrepSection from "./components/start-prep";
 import ScholarshipSection from "./components/scholarship";
 import Footer from "../../global/components/footer";
+import ScrollToTop from "../../scrollToTop";
 interface PropTypes {
     width: number;
     height: number;
@@ -15,6 +16,7 @@ interface PropTypes {
 const HomePage = (props: PropTypes) => {
     return (
         <section>
+            <ScrollToTop />
             <NavBar />
             <Space amt={30} />
             <HeroSection />
