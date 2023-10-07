@@ -1,13 +1,14 @@
 import "./styles/index.scss";
 import Button from "../btn";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const NavBar = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     return (
         <nav>
             <div className="nav-flex">
                 <div className="nav-left">
-                    <div className="logo"></div>
+                    <div className="logo" onClick={() => navigate("/")}></div>
                 </div>
                 <div className="nav-right">
                     <ul>
