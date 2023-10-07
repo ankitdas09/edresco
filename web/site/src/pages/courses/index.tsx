@@ -11,6 +11,7 @@ interface PropTypes {
 }
 
 const CoursePage = (props: PropTypes) => {
+    console.log(props);
     return (
         <section className="bg-blue">
             <ScrollToTop />

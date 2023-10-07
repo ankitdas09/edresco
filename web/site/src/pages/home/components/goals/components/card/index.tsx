@@ -1,10 +1,12 @@
-import Heading from "../heading";
+import Heading from "../../../../../../global/components/heading";
+import Space from "../../../../../../global/components/space";
 import "./styles/index.scss";
 
 interface PropTypes {
     width: number;
     height: number;
     heading: string;
+    imgLink: string;
     subHeading?: string;
 }
 const Card = (props: PropTypes) => {
@@ -14,8 +16,8 @@ const Card = (props: PropTypes) => {
             style={{
                 width: props.width,
                 height: props.height,
-                boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.122)",
-                backgroundColor: "#fff",
+                // boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.122)",
+                // backgroundColor: "#fff",
                 borderRadius: 10,
                 margin: 10,
                 textAlign: "center",
@@ -23,8 +25,13 @@ const Card = (props: PropTypes) => {
                 alignItems: "center",
                 justifyContent: "center",
                 flexDirection: "column",
+                marginBottom: "20px",
             }}
         >
+            <div className="goals-card-img-container">
+                <img src={props.imgLink} alt="" />
+            </div>
+            <Space amt={10} />
             <Heading
                 text={props.heading}
                 size="1.2rem"

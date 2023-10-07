@@ -1,24 +1,33 @@
-import Card from "../../../../global/components/card";
+import Card from "./components/card";
 import Heading from "../../../../global/components/heading";
 import Space from "../../../../global/components/space";
 import "./styles/index.scss";
 
-const content: { heading: string; subheading: string }[] = [
+const content: { heading: string; subheading: string; imgLink: string }[] = [
     {
         heading: "100% Scholarship",
         subheading: "Based on E.A.S.T. Exam",
+        imgLink: "unlimited_access.png",
     },
     {
         heading: "Online Resources",
         subheading: "Access to unlimited all India test series packages",
+        imgLink: "anywhere.png",
     },
     {
         heading: "Expert Teachers",
         subheading: "Highly Experienced and Dedicated Faculties",
+        imgLink: "expert_teachers.png",
     },
     {
         heading: "Specialized Mentoring",
         subheading: "Anonymous mentoring and counselling from IITian/NITian",
+        imgLink: "unlimited_access.png",
+    },
+    {
+        heading: "Specialized Mentoring",
+        subheading: "Anonymous mentoring and counselling from IITian/NITian",
+        imgLink: "expert_teachers.png",
     },
 ];
 
@@ -36,7 +45,13 @@ const GoalsSection = () => {
             <Space amt={30} />
             <div className="card-container">
                 {content.map((c) => (
-                    <Card width={290} height={180} heading={c.heading} subHeading={c.subheading} />
+                    <Card
+                        width={350}
+                        height={180}
+                        heading={c.heading}
+                        subHeading={c.subheading}
+                        imgLink={c.imgLink}
+                    />
                 ))}
             </div>
         </div>
