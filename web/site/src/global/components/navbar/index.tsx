@@ -22,7 +22,7 @@ const NavBar = () => {
                             <Link to={"/courses"}>Courses</Link>
                         </li>
                         <li className={location.pathname === "/scholarship" ? "current-page" : ""}>
-                            <Link to={"/"}>Scholarship</Link>
+                            <Link to={"/scholarship"}>Scholarship</Link>
                         </li>
                         <li className={location.pathname === "/contact" ? "current-page" : ""}>
                             <Link to={"/"}>Contact</Link>

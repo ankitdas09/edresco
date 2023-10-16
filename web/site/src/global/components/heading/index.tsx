@@ -8,6 +8,7 @@ interface PropTypes {
     padding?: string;
     color?: string;
     letterSpacing?: number;
+    center?: boolean;
 }
 const Heading = (props: PropTypes) => {
     return (
@@ -21,6 +22,7 @@ const Heading = (props: PropTypes) => {
                 fontSize: props.size,
                 padding: props.padding,
                 letterSpacing: props.letterSpacing ? props.letterSpacing : "",
+                textAlign: props.center ? "center" : "left",
             }}
         >
             {props.text}

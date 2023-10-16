@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HomePage from "./pages/home";
 import CoursePage from "./pages/courses";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ScholarshipPage from "./pages/scholarship";
 
 function App() {
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -21,6 +22,10 @@ function App() {
         {
             path: "/courses",
             element: <CoursePage width={screenSize.width} height={screenSize.height} />,
+        },
+        {
+            path: "/scholarship",
+            element: <ScholarshipPage width={screenSize.width} height={screenSize.height} />,
         },
     ]);
 

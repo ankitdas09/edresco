@@ -18,7 +18,7 @@ const HomePage = (props: PropTypes) => {
         <section>
             <ScrollToTop />
             <NavBar />
-            <Space amt={30} />
+            {props.width >= 600 ? <Space amt={60} /> : <Space amt={30} />}
             <HeroSection />
             {props.width >= 600 ? <Space amt={150} /> : <Space amt={60} />}
             <GoalsSection />
