@@ -4,6 +4,7 @@ import Space from "../../global/components/space";
 import Footer from "../../global/components/footer";
 import ScrollToTop from "../../scrollToTop";
 import Heading from "../../global/components/heading";
+import ObjectiveCard from "./components/objective-card";
 interface PropTypes {
     width: number;
     height: number;
@@ -20,6 +21,24 @@ const content = [
     { heading: "Media Coverage", subHeading: "At local and national level" },
     { heading: "Top 3", subHeading: "Exciting Prizes & Goodies" },
     { heading: "Participation", subHeading: "Certificate for all" },
+];
+const contentObj = [
+    {
+        heading: "Centralized Exam",
+        text: "E.A.S.T. offers a unified test for students from diverse backgrounds, ensuring fairness in opportunities based on performance.",
+    },
+    {
+        heading: "Education Equity",
+        text: "E.A.S.T. narrows the education gap by supporting talented students regardless of their socio-economic status.",
+    },
+    {
+        heading: "Guidance Hub",
+        text: "E.A.S.T. provides valuable insights into learning paths and career options, helping students make informed choices.",
+    },
+    {
+        heading: "Recognition Platform",
+        text: "E.A.S.T. celebrates students' achievements beyond academics, motivating excellence in various fields.",
+    },
 ];
 
 const ScholarshipPage = (props: PropTypes) => {
@@ -83,26 +102,45 @@ const ScholarshipPage = (props: PropTypes) => {
                     />
                 </div>
                 <Space amt={30} />
-                <div className="east-benefits-card-container flex justify-center align-center wrap">
-                    {content.map((c) => (
-                        <div className="east-benefit-card bg-white drop-shadow rounded-rectangle flex flex-column justify-center align-center">
-                            <Heading
-                                text={c.heading}
-                                font="PT Sans"
-                                size="1.14rem"
-                                fontWeight={800}
-                                maxWidth={280}
-                                center={true}
-                            />
-                            <Heading
-                                text={c.subHeading}
-                                font="PT Sans"
-                                size="0.9rem"
-                                fontWeight={500}
-                                maxWidth={260}
-                                center={true}
-                            />
-                        </div>
+                <div className="container">
+                    <div className="east-benefits-card-container flex justify-center align-center wrap">
+                        {content.map((c) => (
+                            <div className="east-benefit-card bg-white drop-shadow rounded-rectangle flex flex-column justify-center align-center">
+                                <Heading
+                                    text={c.heading}
+                                    font="PT Sans"
+                                    size="1.14rem"
+                                    fontWeight={800}
+                                    maxWidth={280}
+                                    center={true}
+                                />
+                                <Heading
+                                    text={c.subHeading}
+                                    font="PT Sans"
+                                    size="0.9rem"
+                                    fontWeight={500}
+                                    maxWidth={260}
+                                    center={true}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            {props.width >= 600 ? <Space amt={30} /> : <Space amt={15} />}
+            <div className="objectives-of-east bg-white drop-shadow container rounded-rectangle">
+                <Heading
+                    text="Objectives of EAST"
+                    font="Raleway"
+                    size="1.4rem"
+                    fontWeight={600}
+                    maxWidth={"100%"}
+                    center={true}
+                    underline={true}
+                />
+                <div className="objectives grid-2c">
+                    {contentObj.map((c) => (
+                        <ObjectiveCard heading={c.heading} text={c.text} />
                     ))}
                 </div>
             </div>

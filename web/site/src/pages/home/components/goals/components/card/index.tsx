@@ -46,6 +46,7 @@ const Card = (props: PropTypes) => {
                     fontWeight={400}
                     maxWidth={200}
                     font={"PT Sans"}
+                    center={true}
                 />
             )}
         </div>

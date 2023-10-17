@@ -3,12 +3,13 @@ interface PropTypes {
     text: string;
     size: string;
     fontWeight: number;
-    maxWidth: number;
+    maxWidth: number | string;
     font: "Raleway" | "PT Sans";
     padding?: string;
     color?: string;
     letterSpacing?: number;
     center?: boolean;
+    underline?: boolean;
 }
 const Heading = (props: PropTypes) => {
     return (
@@ -23,6 +24,7 @@ const Heading = (props: PropTypes) => {
                 padding: props.padding,
                 letterSpacing: props.letterSpacing ? props.letterSpacing : "",
                 textAlign: props.center ? "center" : "left",
+                textDecoration: props.underline ? "underline" : "",
             }}
         >
             {props.text}
