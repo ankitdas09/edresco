@@ -1,6 +1,7 @@
 import "./styles/index.scss";
 import Button from "../btn";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+
 const NavBar = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -25,7 +26,7 @@ const NavBar = () => {
                             <Link to={"/scholarship"}>Scholarship</Link>
                         </li>
                         <li className={location.pathname === "/contact" ? "current-page" : ""}>
-                            <Link to={"/"}>Contact</Link>
+                            <Link to={"/contact"}>Contact</Link>
                         </li>
                         <li>
                             <Button
