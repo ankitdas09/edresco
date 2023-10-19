@@ -3,12 +3,15 @@ import "./styles/index.scss";
 interface propTypes {
     heading: string;
     text: string;
+    img: string;
 }
 const ObjectiveCard = (props: propTypes) => {
     return (
         <div className="objective-card">
             <div className="objective-container flex">
-                <div className="obj-img"></div>
+                <div className="obj-img">
+                    <img src={props.img} alt="" className="east-objective-icon" />
+                </div>
                 <div className="obj-body">
                     <Heading
                         text={props.heading}

@@ -9,8 +9,12 @@
     .obj-img{
       min-width: 75px;
       min-height: 75px;
-      background-color: #eaeaea;
+      // background-color: #eaeaea;
       border-radius: 50%;
+      overflow: hidden;
+      .east-objective-icon{
+        width: 100%;
+      }
     }
     .obj-body{
       margin-left: 10px;

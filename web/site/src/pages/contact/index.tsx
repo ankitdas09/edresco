@@ -11,6 +11,16 @@ interface PropTypes {
     height: number;
 }
 
+const contactDetails = [
+    { heading: "Call (8:00AM to 8:00PM)", text: "+91-7670070767", icon: "call.png" },
+    { heading: "Email Us", text: "edresco.official@gmail.com", icon: "email.png" },
+    {
+        heading: "Address",
+        text: "2nd floor,Arunodoi Path, SrimantapurGuwahati, Assam, 781032India",
+        icon: "location.png",
+    },
+];
+
 const ContactPage = (props: PropTypes) => {
     console.log(props);
     return (
@@ -37,7 +47,7 @@ const ContactPage = (props: PropTypes) => {
                             maxWidth={450}
                         />
                         <Space amt={30} />
-                        <input type="text" placeholder="Phone Number" className="input-main" />
+                        <input type="number" placeholder="Phone Number" className="input-main" />
                         <input type="text" placeholder="Name" className="input-main" />
                         <textarea placeholder="Enter query" className="input-main" rows={5} />
                         <Space amt={20} />
@@ -60,12 +70,52 @@ const ContactPage = (props: PropTypes) => {
                         text="Contact Us"
                         font="Raleway"
                         fontWeight={700}
-                        size="1.0rem"
+                        size="1.2rem"
                         maxWidth={"100%"}
                         center={true}
                     />
+                    <Space amt={30} />
+                    <div className="contact-details-container flex justify-around column-on-mobile align-start">
+                        {contactDetails.map((c) => (
+                            <div className="contact-details-main flex flex-column row-on-mobile justify-center align-center">
+                                <div className="contact-icon-container bg-blue rounded-rectangle">
+                                    <img src={c.icon} alt="" className="contact-icon" />
+                                </div>
+                                <div className="contact-details-text-container flex flex-column align-start-mobile">
+                                    <Heading
+                                        text={c.heading}
+                                        font="PT Sans"
+                                        fontWeight={600}
+                                        size="0.8rem"
+                                        maxWidth={"100%"}
+                                        center={true}
+                                    />
+                                    {props.width <= 600 ? (
+                                        <Heading
+                                            text={c.text}
+                                            font="PT Sans"
+                                            fontWeight={400}
+                                            size="0.8rem"
+                                            maxWidth={200}
+                                            center={false}
+                                        />
+                                    ) : (
+                                        <Heading
+                                            text={c.text}
+                                            font="PT Sans"
+                                            fontWeight={400}
+                                            size="0.8rem"
+                                            maxWidth={200}
+                                            center={true}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
+            <Space amt={45} />
             <Footer />
         </section>
     );

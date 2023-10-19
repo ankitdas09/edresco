@@ -5,6 +5,7 @@ import Footer from "../../global/components/footer";
 import ScrollToTop from "../../scrollToTop";
 import Heading from "../../global/components/heading";
 import ObjectiveCard from "./components/objective-card";
+import Button from "../../global/components/btn";
 interface PropTypes {
     width: number;
     height: number;
@@ -26,18 +27,22 @@ const contentObj = [
     {
         heading: "Centralized Exam",
         text: "E.A.S.T. offers a unified test for students from diverse backgrounds, ensuring fairness in opportunities based on performance.",
+        img: "centralized-exam.png",
     },
     {
         heading: "Education Equity",
         text: "E.A.S.T. narrows the education gap by supporting talented students regardless of their socio-economic status.",
+        img: "education-equity.png",
     },
     {
         heading: "Guidance Hub",
         text: "E.A.S.T. provides valuable insights into learning paths and career options, helping students make informed choices.",
+        img: "guidance-hub.png",
     },
     {
         heading: "Recognition Platform",
         text: "E.A.S.T. celebrates students' achievements beyond academics, motivating excellence in various fields.",
+        img: "recognition-platform.png",
     },
 ];
 
@@ -69,7 +74,7 @@ const ScholarshipPage = (props: PropTypes) => {
                         <Space amt={30} />
                         <Heading
                             text="Organized by IITians,NITians grads, E.A.S.T. is an Edresco Admission cum Scholarship Test backed by the Edresco primarily to search talented candidates, provide recognition and exposure, and extend maximum support to the unprivileged and deserved through scholarships, so that more and more students can fulfill their dream of a better education."
-                            font="Raleway"
+                            font="PT Sans"
                             size="0.9rem"
                             fontWeight={400}
                             maxWidth={500}
@@ -77,10 +82,20 @@ const ScholarshipPage = (props: PropTypes) => {
                         <Space amt={10} />
                         <Heading
                             text="Support to the unprivileged and deserved through scholarships, so that more and more students can fulfill their dream of a better education."
-                            font="Raleway"
+                            font="PT Sans"
                             size="0.9rem"
                             fontWeight={400}
                             maxWidth={500}
+                        />
+                        <Space amt={30} />
+                        <Button
+                            text="Register"
+                            bgColor="#0056B8"
+                            fgColor="#fff"
+                            width={150}
+                            height={35}
+                            type="filled"
+                            linkTo="/home"
                         />
                     </div>
                     <div className="east-right">
@@ -140,7 +155,7 @@ const ScholarshipPage = (props: PropTypes) => {
                 />
                 <div className="objectives grid-2c">
                     {contentObj.map((c) => (
-                        <ObjectiveCard heading={c.heading} text={c.text} />
+                        <ObjectiveCard img={c.img} heading={c.heading} text={c.text} />
                     ))}
                 </div>
             </div>
