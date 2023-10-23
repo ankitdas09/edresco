@@ -75,6 +75,7 @@ const CoursesDescSection = () => {
                     font="PT Sans"
                     fontWeight={400}
                     maxWidth={600}
+                    center={true}
                 />
                 <Space amt={20} />
                 <div className="line"></div>
