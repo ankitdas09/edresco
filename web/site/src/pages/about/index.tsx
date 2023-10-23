@@ -48,7 +48,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                     </div>
@@ -88,7 +88,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                         <Space amt={10} />
@@ -97,7 +97,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                     </div>
@@ -121,7 +121,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                         <Space amt={10} />
@@ -130,7 +130,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                         <Space amt={10} />
@@ -140,7 +140,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                         <Space amt={10} />
@@ -149,7 +149,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                         <Space amt={10} />
@@ -171,7 +171,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                         <Space amt={10} />
@@ -180,7 +180,7 @@ const AboutPage = (props: PropTypes) => {
                             letterSpacing={0}
                             fontWeight={400}
                             size="0.9rem"
-                            maxWidth={"80%"}
+                            maxWidth={"85%"}
                             font="PT Sans"
                         />
                         <Space amt={10} />
