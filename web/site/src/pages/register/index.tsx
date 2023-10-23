@@ -16,9 +16,9 @@ const RegisterPage = () => {
         e.preventDefault();
         const phoneNumber = e.target[0].value;
         const email = e.target[1].value;
-        const name = e.target[1].value;
-        const currentCourse = e.target[1].value;
-        console.log(phoneNumber);
+        const name = e.target[2].value;
+        const currentCourse = e.target[3].value;
+
         const promise = databases.createDocument(databaseId, collectionId, ID.unique(), {
             phoneNumber,
             email,
@@ -27,8 +27,8 @@ const RegisterPage = () => {
         });
 
         promise.then(
-            function (response) {
-                console.log(response);
+            function () {
+                // console.log(response);
                 setSubmitted(true);
                 setBtnDisabled(false);
             },
