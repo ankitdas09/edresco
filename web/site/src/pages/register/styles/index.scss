@@ -14,6 +14,15 @@
     input{
       display: block;
     }
+    select{
+      color: #787878;
+      padding: 0 !important;
+      padding-left: 17px !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+    }
     .input-main{
       // width: 100%;
       max-width: 450px;

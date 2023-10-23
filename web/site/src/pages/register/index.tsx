@@ -4,6 +4,7 @@ import Heading from "../../global/components/heading";
 import Space from "../../global/components/space";
 
 import "./styles/index.scss";
+
 const RegisterPage = () => {
     function submitForm(e: React.FormEvent) {
         e.preventDefault();
@@ -62,14 +63,30 @@ const RegisterPage = () => {
                                 required
                                 className="input-main"
                             />
-                            <input
+                            {/* <input
                                 type="text"
                                 placeholder="Current course (9, 10, dropper etc)"
                                 name=""
                                 id=""
                                 required
                                 className="input-main"
-                            />
+                            /> */}
+                            {/* <DropDownMenu /> */}
+                            <select
+                                name="currentCourse"
+                                id="currentCourse"
+                                className="input-main"
+                                required
+                            >
+                                <option value="" disabled selected>
+                                    Current Course
+                                </option>
+                                <option value="volvo">Class 9</option>
+                                <option value="volvo">Class 10</option>
+                                <option value="volvo">Class 11</option>
+                                <option value="volvo">Class 12</option>
+                                <option value="volvo">Dropper</option>
+                            </select>
                             <Space amt={10} />
                             <Button
                                 text="Join Now!"
