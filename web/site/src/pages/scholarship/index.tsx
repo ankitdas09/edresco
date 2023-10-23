@@ -95,7 +95,7 @@ const ScholarshipPage = (props: PropTypes) => {
                             width={150}
                             height={35}
                             type="filled"
-                            linkTo="/home"
+                            linkTo="/register"
                         />
                     </div>
                     <div className="east-right">
@@ -120,7 +120,7 @@ const ScholarshipPage = (props: PropTypes) => {
                 <div className="container">
                     <div className="east-benefits-card-container flex justify-center align-center wrap">
                         {content.map((c) => (
-                            <div className="east-benefit-card bg-white drop-shadow rounded-rectangle flex flex-column justify-center align-center">
+                            <div className="east-benefit-card bg-white drop-shadow rounded-rectangle flex flex-column justify-center align-center hover-effect">
                                 <Heading
                                     text={c.heading}
                                     font="PT Sans"
@@ -144,6 +144,7 @@ const ScholarshipPage = (props: PropTypes) => {
             </div>
             {props.width >= 600 ? <Space amt={30} /> : <Space amt={15} />}
             <div className="objectives-of-east bg-white drop-shadow container rounded-rectangle">
+                <Space amt={30} />
                 <Heading
                     text="Objectives of EAST"
                     font="Raleway"
@@ -158,6 +159,7 @@ const ScholarshipPage = (props: PropTypes) => {
                         <ObjectiveCard img={c.img} heading={c.heading} text={c.text} />
                     ))}
                 </div>
+                <Space amt={30} />
             </div>
             {props.width >= 600 ? <Space amt={30} /> : <Space amt={15} />}
             <Footer />

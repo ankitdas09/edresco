@@ -16,3 +16,10 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.hover-effect{
+  transition: 300ms;
+  &:hover{
+    transform: scale(1.05);    
+    transition: 300ms;
+  }
+}

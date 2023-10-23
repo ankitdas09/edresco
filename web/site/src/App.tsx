@@ -5,6 +5,8 @@ import CoursePage from "./pages/courses";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ScholarshipPage from "./pages/scholarship";
 import ContactPage from "./pages/contact";
+import RegisterPage from "./pages/register";
+import AboutPage from "./pages/about";
 
 function App() {
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -21,6 +23,10 @@ function App() {
             element: <HomePage width={screenSize.width} height={screenSize.height} />,
         },
         {
+            path: "/about",
+            element: <AboutPage width={screenSize.width} height={screenSize.height} />,
+        },
+        {
             path: "/courses",
             element: <CoursePage width={screenSize.width} height={screenSize.height} />,
         },
@@ -31,6 +37,10 @@ function App() {
         {
             path: "/contact",
             element: <ContactPage width={screenSize.width} height={screenSize.height} />,
+        },
+        {
+            path: "/register",
+            element: <RegisterPage />,
         },
     ]);
 

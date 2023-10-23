@@ -15,7 +15,7 @@ const Button = (props: PropTypes) => {
     const navigate = useNavigate();
     return (
         <button
-            className="btn"
+            className="btn hover-effect"
             style={{
                 width: props.width,
                 height: props.height,

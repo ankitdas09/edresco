@@ -1,6 +1,9 @@
 import "./styles/index.scss";
 interface PropTypes {
     text: string;
+    secondaryText?: string;
+    trailingText?: string;
+    secondaryTextColor?: string;
     size: string;
     fontWeight: number;
     maxWidth: number | string;
@@ -10,6 +13,7 @@ interface PropTypes {
     letterSpacing?: number;
     center?: boolean;
     underline?: boolean;
+    mLeft?: string;
 }
 const Heading = (props: PropTypes) => {
     return (
@@ -18,16 +22,29 @@ const Heading = (props: PropTypes) => {
             style={{
                 fontFamily: props.font,
                 fontWeight: props.fontWeight,
-                color: props.color ? props.color : "#3E3E3E",
+                color: props.color ? props.color : "#464646",
                 maxWidth: props.maxWidth,
                 fontSize: props.size,
                 padding: props.padding,
                 letterSpacing: props.letterSpacing ? props.letterSpacing : "",
                 textAlign: props.center ? "center" : "left",
                 textDecoration: props.underline ? "underline" : "",
+                marginLeft: props.mLeft ? props.mLeft : "0",
             }}
         >
             {props.text}
+            {props.secondaryText && (
+                <span
+                    style={{
+                        color: props.secondaryTextColor ? props.secondaryTextColor : "#3E3E3E",
+                        fontWeight: props.fontWeight,
+                        fontFamily: props.font,
+                    }}
+                >
+                    {props.secondaryText}
+                </span>
+            )}
+            {props.trailingText && props.trailingText}
         </p>
     );
 };

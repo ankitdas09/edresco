@@ -1,0 +1,14 @@
+
+.about-left, .about-right{
+  margin: 0px 20px;
+}
+@media screen and (max-width: 600px) {
+  .about-left, .about-right{
+    img{
+        margin: 20px 0;
+    }
+  }
+  // .about-right{
+  //   flex-direction: column-reverse;
+  // }
+}

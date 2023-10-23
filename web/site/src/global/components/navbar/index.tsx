@@ -17,7 +17,7 @@ const NavBar = () => {
                             <Link to={"/"}>Home</Link>
                         </li>
                         <li className={location.pathname === "/about" ? "current-page" : ""}>
-                            <Link to={"/"}>About</Link>
+                            <Link to={"/about"}>About</Link>
                         </li>
                         <li className={location.pathname === "/courses" ? "current-page" : ""}>
                             <Link to={"/courses"}>Courses</Link>
@@ -36,6 +36,7 @@ const NavBar = () => {
                                 type="filled"
                                 bgColor="#0056B8"
                                 fgColor="#fff"
+                                linkTo="/register"
                             />
                         </li>
                     </ul>
