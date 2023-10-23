@@ -44,13 +44,14 @@ const GoalsSection = () => {
             />
             <Space amt={30} />
             <div className="card-container">
-                {content.map((c) => (
+                {content.map((c, idx) => (
                     <Card
                         width={350}
                         height={180}
                         heading={c.heading}
                         subHeading={c.subheading}
                         imgLink={c.imgLink}
+                        key={idx}
                     />
                 ))}
             </div>

@@ -56,8 +56,8 @@ const StartPrepSection = () => {
             </div>
             <div className="start-prep-right">
                 <div className="course-card-container">
-                    {content.map((c) => (
-                        <CourseCard text={c} />
+                    {content.map((c, idx) => (
+                        <CourseCard text={c} key={idx} />
                     ))}
                 </div>
             </div>

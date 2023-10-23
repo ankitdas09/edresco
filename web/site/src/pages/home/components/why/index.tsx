@@ -30,8 +30,8 @@ const WhySection = () => {
                 />
                 <Space amt={20} />
                 <div className="list-item-container">
-                    {content.map((c) => (
-                        <ListItem text={c} />
+                    {content.map((c, idx) => (
+                        <ListItem text={c} key={idx} />
                     ))}
                 </div>
                 <Space amt={20} />

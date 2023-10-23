@@ -9,6 +9,7 @@ interface PropTypes {
     bgColor: string;
     fgColor: string;
     linkTo?: string;
+    disabled?: boolean;
 }
 
 const Button = (props: PropTypes) => {
@@ -26,6 +27,7 @@ const Button = (props: PropTypes) => {
                 fontWeight: 700,
                 cursor: "pointer",
             }}
+            disabled={props.disabled ? props.disabled : false}
             onClick={() => {
                 if (!props.linkTo) return;
                 navigate(props.linkTo);

@@ -1,16 +1,44 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "../../global/components/btn";
 import Heading from "../../global/components/heading";
 import Space from "../../global/components/space";
 
 import "./styles/index.scss";
+import { ID, collectionId, databaseId, databases } from "../../lib/appwrite";
 
 const RegisterPage = () => {
-    function submitForm(e: React.FormEvent) {
-        e.preventDefault();
-        setSubmitted(true);
-    }
     const [submitted, setSubmitted] = useState(false);
+    const [btnDisabled, setBtnDisabled] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
+    function submitForm(e) {
+        setBtnDisabled(true);
+        e.preventDefault();
+        const phoneNumber = e.target[0].value;
+        const email = e.target[1].value;
+        const name = e.target[1].value;
+        const currentCourse = e.target[1].value;
+        console.log(phoneNumber);
+        const promise = databases.createDocument(databaseId, collectionId, ID.unique(), {
+            phoneNumber,
+            email,
+            name,
+            currentCourse,
+        });
+
+        promise.then(
+            function (response) {
+                console.log(response);
+                setSubmitted(true);
+                setBtnDisabled(false);
+            },
+            function (error) {
+                alert(error);
+                console.log(error);
+                setBtnDisabled(false);
+            }
+        );
+    }
     return (
         <section className="bg-register flex justify-center align-center">
             <div className="main-register-container rounded-rectangle drop-shadow flex flex-column justify-center align-center">
@@ -42,7 +70,7 @@ const RegisterPage = () => {
                             <input
                                 type="number"
                                 placeholder="Phone number"
-                                name=""
+                                name="number"
                                 id=""
                                 required
                                 className="input-main"
@@ -50,7 +78,7 @@ const RegisterPage = () => {
                             <input
                                 type="email"
                                 placeholder="Email"
-                                name=""
+                                name="email"
                                 id=""
                                 required
                                 className="input-main"
@@ -58,7 +86,7 @@ const RegisterPage = () => {
                             <input
                                 type="text"
                                 placeholder="Name"
-                                name=""
+                                name="name"
                                 id=""
                                 required
                                 className="input-main"
@@ -81,21 +109,24 @@ const RegisterPage = () => {
                                 <option value="" disabled selected>
                                     Current Course
                                 </option>
-                                <option value="volvo">Class 9</option>
-                                <option value="volvo">Class 10</option>
-                                <option value="volvo">Class 11</option>
-                                <option value="volvo">Class 12</option>
-                                <option value="volvo">Dropper</option>
+                                <option value="9">Class 9</option>
+                                <option value="10">Class 10</option>
+                                <option value="11">Class 11</option>
+                                <option value="12">Class 12</option>
+                                <option value="dropper">Dropper</option>
                             </select>
                             <Space amt={10} />
-                            <Button
-                                text="Join Now!"
-                                bgColor="#0056B8"
-                                fgColor="#fff"
-                                width={140}
-                                height={36}
-                                type="filled"
-                            />
+                            {!btnDisabled && (
+                                <Button
+                                    text="Join Now!"
+                                    bgColor="#0056B8"
+                                    fgColor="#fff"
+                                    width={140}
+                                    height={36}
+                                    type="filled"
+                                    disabled={btnDisabled}
+                                />
+                            )}
                             <Space amt={10} />
                             <Heading
                                 text="We do not share your information with any third party."
