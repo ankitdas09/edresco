@@ -51,7 +51,7 @@ const ScholarshipPage = (props: PropTypes) => {
         <section className="bg-blue">
             <ScrollToTop />
             <NavBar />
-            {props.width >= 600 ? <Space amt={80} /> : <Space amt={15} />}
+            {props.width >= 600 ? <Space amt={80} /> : <Space amt={0} />}
             <div className="container bg-white drop-shadow rounded-rectangle">
                 <div className="flex justify-around align-center east-container">
                     <div className="east-left">
@@ -116,7 +116,7 @@ const ScholarshipPage = (props: PropTypes) => {
                         center={true}
                     />
                 </div>
-                <Space amt={30} />
+                <Space amt={24} />
                 <div className="container">
                     <div className="east-benefits-card-container flex justify-center align-center wrap">
                         {content.map((c) => (

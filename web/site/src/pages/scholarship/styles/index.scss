@@ -95,6 +95,9 @@
   }
 }
 @media screen and (max-width: 690px) {
+  .east-left{
+    padding: 0 30px;
+  }
   .east-benefits-card-container{
     margin: 0px 5px;
   }
@@ -106,7 +109,7 @@
 }
 @media screen and (max-width: 600px) {
   .east-benefits-card-container{
-    margin: 0px 35px;
+    // margin: 0px 35px;
   }
   .east-benefit-card{
     width: 100%;
