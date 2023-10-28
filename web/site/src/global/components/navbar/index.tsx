@@ -1,10 +1,12 @@
 import "./styles/index.scss";
 import Button from "../btn";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const NavBar = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [navopen, setNavopen] = useState(false);
     return (
         <nav>
             <div className="nav-flex">
@@ -41,7 +43,34 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
+                <div className="nav-right-mobile">
+                    <div
+                        className="hamburger-icon"
+                        onClick={() => {
+                            setNavopen(!navopen);
+                        }}
+                    ></div>
+                </div>
             </div>
+            {navopen && (
+                <ul className="mobile-nav-tray">
+                    <li className={location.pathname === "/" ? "current-page" : ""}>
+                        <Link to={"/"}>Home</Link>
+                    </li>
+                    <li className={location.pathname === "/about" ? "current-page" : ""}>
+                        <Link to={"/about"}>About</Link>
+                    </li>
+                    <li className={location.pathname === "/courses" ? "current-page" : ""}>
+                        <Link to={"/courses"}>Courses</Link>
+                    </li>
+                    <li className={location.pathname === "/scholarship" ? "current-page" : ""}>
+                        <Link to={"/scholarship"}>Scholarship</Link>
+                    </li>
+                    <li className={location.pathname === "/contact" ? "current-page" : ""}>
+                        <Link to={"/contact"}>Contact</Link>
+                    </li>
+                </ul>
+            )}
         </nav>
     );
 };
