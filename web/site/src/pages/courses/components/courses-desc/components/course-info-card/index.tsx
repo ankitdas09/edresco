@@ -23,6 +23,7 @@ const CourseInfoCard = ({
                 font="PT Sans"
                 maxWidth={500}
                 letterSpacing={3}
+                center={true}
             />
             <Space amt={5} />
             <Heading
@@ -33,6 +34,7 @@ const CourseInfoCard = ({
                 font="Raleway"
                 maxWidth={500}
                 letterSpacing={3}
+                center={true}
             />
             <Space amt={10} />
             <div className="line"></div>
