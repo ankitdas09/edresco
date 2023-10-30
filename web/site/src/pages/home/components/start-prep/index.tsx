@@ -1,3 +1,4 @@
+import AbsIcon from "../../../../global/components/abs-icon";
 import Button from "../../../../global/components/btn";
 import Heading from "../../../../global/components/heading";
 import Space from "../../../../global/components/space";
@@ -6,14 +7,28 @@ import CourseCard from "./components/course-card";
 import "./styles/index.scss";
 
 const content = ["Disha", "Parishram", "Fresher", "Achiever", "Target"];
+const absIcons = [
+    { top: "0", left: "0px", icon: "./abs-icons/Group 380.png" },
+    { top: "20px", left: "240px", icon: "./abs-icons/abs-icon.png" },
+    { top: "40px", left: "480px", icon: "./abs-icons/abs-icon2.png" },
+    { top: "20px", left: "1260px", icon: "./abs-icons/Group (6).png" },
+    { top: "200px", left: "1260px", icon: "./abs-icons/Group (8).png" },
+    { top: "360px", left: "1100px", icon: "./abs-icons/Group (10).png" },
+    { top: "350px", left: "500px", icon: "./abs-icons/Group (11).png" },
+    { top: "380px", left: "200px", icon: "./abs-icons/Group (13).png" },
+    { top: "350px", left: "35px", icon: "./abs-icons/Group (7).png" },
+];
 
 const StartPrepSection = () => {
     return (
         <div className="start-prep-container container flex">
+            {absIcons.map((c) => {
+                return <AbsIcon top={c.top} left={c.left} icon={c.icon} />;
+            })}
             <div className="start-prep-left">
                 <Heading
                     text="Start the Preparations!"
-                    size="1.8rem"
+                    size="2rem"
                     fontWeight={600}
                     font="Montserrat"
                     maxWidth={1000}
@@ -58,13 +73,38 @@ const StartPrepSection = () => {
             <div className="start-prep-right">
                 <div className="flex justify-center align-center">
                     <div className="course-card-right-triple">
-                        <CourseCard text={content[0]} class="For class 9" key={0} />
-                        <CourseCard text={content[1]} class="For class 10" key={1} />
-                        <CourseCard text={content[2]} class="For class 11" key={2} />
+                        <CourseCard
+                            text={content[0]}
+                            class="For class 9"
+                            img="./course-icons/2.png"
+                            key={0}
+                        />
+                        <CourseCard
+                            text={content[1]}
+                            class="For class 10"
+                            img="./course-icons/3.png"
+                            key={1}
+                        />
+                        <CourseCard
+                            text={content[2]}
+                            class="For class 11"
+                            img="./course-icons/8.png"
+                            key={2}
+                        />
                     </div>
                     <div className="course-card-right-double">
-                        <CourseCard text={content[3]} class="For class 12" key={3} />
-                        <CourseCard text={content[4]} class="For Droppers" key={4} />
+                        <CourseCard
+                            text={content[3]}
+                            class="For class 12"
+                            img="./course-icons/1.png"
+                            key={3}
+                        />
+                        <CourseCard
+                            text={content[4]}
+                            class="For Droppers"
+                            img="./course-icons/6.png"
+                            key={4}
+                        />
                     </div>
                 </div>
             </div>
