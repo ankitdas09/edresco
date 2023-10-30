@@ -5,7 +5,7 @@ import CourseCard from "./components/course-card";
 
 import "./styles/index.scss";
 
-const content = ["Pre Foundation Course", "Foundation Course", "Fresher Course", "Dropper Course"];
+const content = ["Disha", "Parishram", "Fresher", "Achiever", "Target"];
 
 const StartPrepSection = () => {
     return (
@@ -56,10 +56,16 @@ const StartPrepSection = () => {
                 />
             </div>
             <div className="start-prep-right">
-                <div className="course-card-container">
-                    {content.map((c, idx) => (
-                        <CourseCard text={c} key={idx} />
-                    ))}
+                <div className="flex justify-center align-center">
+                    <div className="course-card-right-triple">
+                        <CourseCard text={content[0]} class="For class 9" key={0} />
+                        <CourseCard text={content[1]} class="For class 10" key={1} />
+                        <CourseCard text={content[2]} class="For class 11" key={2} />
+                    </div>
+                    <div className="course-card-right-double">
+                        <CourseCard text={content[3]} class="For class 12" key={3} />
+                        <CourseCard text={content[4]} class="For Droppers" key={4} />
+                    </div>
                 </div>
             </div>
         </div>
