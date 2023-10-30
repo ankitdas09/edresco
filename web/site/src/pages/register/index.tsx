@@ -44,13 +44,14 @@ const RegisterPage = () => {
             <div className="main-register-container rounded-rectangle drop-shadow flex flex-column justify-center align-center">
                 {!submitted ? (
                     <>
+                        <Space amt={10} />
                         <Heading
                             text="Join us "
                             secondaryText="now!"
                             size="1.8rem"
                             fontWeight={600}
                             maxWidth={"100%"}
-                            font="Raleway"
+                            font="Montserrat"
                             center={true}
                             secondaryTextColor="#0056B8"
                         />
@@ -80,7 +81,7 @@ const RegisterPage = () => {
                                 placeholder="Email"
                                 name="email"
                                 id=""
-                                required
+                                // required
                                 className="input-main"
                             />
                             <input
@@ -100,6 +101,23 @@ const RegisterPage = () => {
                                 className="input-main"
                             /> */}
                             {/* <DropDownMenu /> */}
+                            <select name="board" id="board" className="input-main" required>
+                                <option value="" disabled selected>
+                                    Board
+                                </option>
+                                <option value="cbse">CBSE</option>
+                                <option value="seba">SEBA</option>
+                                <option value="ahsec">AHSEC</option>
+                                <option value="icse">ICSE</option>
+                                <option value="others">Others</option>
+                            </select>
+                            <select name="center" id="center" className="input-main" required>
+                                <option value="" disabled selected>
+                                    Center
+                                </option>
+                                <option value="hajo">Hajo</option>
+                                <option value="mukulmua">Mukulmua</option>
+                            </select>
                             <select
                                 name="currentCourse"
                                 id="currentCourse"
@@ -107,13 +125,26 @@ const RegisterPage = () => {
                                 required
                             >
                                 <option value="" disabled selected>
-                                    Current Course
+                                    Class
                                 </option>
                                 <option value="9">Class 9</option>
                                 <option value="10">Class 10</option>
                                 <option value="11">Class 11</option>
                                 <option value="12">Class 12</option>
                                 <option value="dropper">Dropper</option>
+                            </select>
+                            <select
+                                name="preparation"
+                                id="preparation"
+                                className="input-main"
+                                required
+                            >
+                                <option value="" disabled selected>
+                                    Preparation
+                                </option>
+                                <option value="board">Board</option>
+                                <option value="hajo">Medical</option>
+                                <option value="mukulmua">Engineering</option>
                             </select>
                             <Space amt={10} />
                             {!btnDisabled && (
@@ -150,7 +181,7 @@ const RegisterPage = () => {
                             size="1.8rem"
                             fontWeight={600}
                             maxWidth={"100%"}
-                            font="Raleway"
+                            font="Montserrat"
                             center={true}
                             secondaryTextColor="#0056B8"
                             color="#639D4A"

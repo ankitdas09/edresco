@@ -57,7 +57,7 @@ const ScholarshipPage = (props: PropTypes) => {
                     <div className="east-left">
                         <Heading
                             text="E.A.S.T."
-                            font="Raleway"
+                            font="Montserrat"
                             size="3rem"
                             fontWeight={900}
                             letterSpacing={8}
@@ -65,7 +65,7 @@ const ScholarshipPage = (props: PropTypes) => {
                         />
                         <Heading
                             text="SCHOLARSHIP TEST"
-                            font="Raleway"
+                            font="Montserrat"
                             size="1.4rem"
                             fontWeight={400}
                             letterSpacing={8}
@@ -108,7 +108,7 @@ const ScholarshipPage = (props: PropTypes) => {
                 <div className="container flex justify-center align-center">
                     <Heading
                         text="Benefits for Students in Edresco (through E.A.S.T.)"
-                        font="Raleway"
+                        font="Montserrat"
                         size="1.4rem"
                         fontWeight={500}
                         maxWidth={600}
@@ -147,7 +147,7 @@ const ScholarshipPage = (props: PropTypes) => {
                 <Space amt={30} />
                 <Heading
                     text="Objectives of EAST"
-                    font="Raleway"
+                    font="Montserrat"
                     size="1.4rem"
                     fontWeight={600}
                     maxWidth={"100%"}

@@ -10,6 +10,7 @@ interface PropTypes {
     fgColor: string;
     linkTo?: string;
     disabled?: boolean;
+    fontSize?: string;
 }
 
 const Button = (props: PropTypes) => {
@@ -20,12 +21,13 @@ const Button = (props: PropTypes) => {
             style={{
                 width: props.width,
                 height: props.height,
-                backgroundColor: props.type === "filled" ? props.bgColor : "",
+                backgroundColor: props.type === "filled" ? props.bgColor : "#fff",
                 color: props.fgColor,
-                border: "none",
+                border: props.type === "filled" ? "none" : "1px solid",
                 borderRadius: 5,
                 fontWeight: 700,
                 cursor: "pointer",
+                fontSize: props.fontSize,
             }}
             disabled={props.disabled ? props.disabled : false}
             onClick={() => {

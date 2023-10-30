@@ -23,9 +23,9 @@ const WhySection = () => {
             <div className="why-right">
                 <Heading
                     text="Why Choose Edresco?"
-                    size="1.4rem"
+                    size="1.8rem"
                     fontWeight={600}
-                    font="Raleway"
+                    font="Montserrat"
                     maxWidth={1000}
                 />
                 <Space amt={20} />
@@ -36,8 +36,8 @@ const WhySection = () => {
                 </div>
                 <Space amt={20} />
                 <Heading
-                    text={"Any many more benefits!"}
-                    size="1rem"
+                    text={"And many more benefits!"}
+                    size="1.15rem"
                     font="PT Sans"
                     fontWeight={400}
                     maxWidth={500}

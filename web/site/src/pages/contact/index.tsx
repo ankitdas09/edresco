@@ -33,7 +33,7 @@ const ContactPage = (props: PropTypes) => {
                     <div className="contact-left">
                         <Heading
                             text="Reach out to us."
-                            font="Raleway"
+                            font="Montserrat"
                             fontWeight={700}
                             size="1.5rem"
                             maxWidth={"100%"}
@@ -41,7 +41,7 @@ const ContactPage = (props: PropTypes) => {
                         <Space amt={12} />
                         <Heading
                             text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour."
-                            font="Raleway"
+                            font="Montserrat"
                             fontWeight={400}
                             size="0.9rem"
                             maxWidth={450}
@@ -68,7 +68,7 @@ const ContactPage = (props: PropTypes) => {
                 <div className="contact-info-container bg-white drop-shadow rounded-rectangle">
                     <Heading
                         text="Contact Us"
-                        font="Raleway"
+                        font="Montserrat"
                         fontWeight={700}
                         size="1.2rem"
                         maxWidth={"100%"}

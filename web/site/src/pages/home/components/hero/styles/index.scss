@@ -1,6 +1,14 @@
 
 
 .hero{
+  position: relative;
+  // .abs-icon{
+  //   position: absolute;
+  //   max-width: 50px;
+  //   img{
+  //     width: 100%;
+  //   }
+  // }
   .hero-left{
     flex: 2;
     .hero-left-anim{
@@ -17,14 +25,14 @@
       transform-box: fill-box;
     }
     .hero-text{
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       color: #3E3E3E;
       max-width: 500px;
       font-size: 2em;
     }
     .hero-subtext{
-      // font-family: 'Raleway', sans-serif;
+      // font-family: 'Montserrat', sans-serif;
       // font-weight: 700;
       color: #3E3E3E;
       max-width: 500px;
@@ -49,6 +57,26 @@
     .hero-right{
       margin-top: 50px;
       max-width: 450px;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  *{
+    // display: none;
+  }
+  .hero{
+    .abs-icon{
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 9800px) {
+  *{
+    // display: none;
+  }
+  .hero{
+    .abs-icon{
+      display: none;
     }
   }
 }

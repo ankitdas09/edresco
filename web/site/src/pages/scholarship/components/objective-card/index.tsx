@@ -15,7 +15,7 @@ const ObjectiveCard = (props: propTypes) => {
                 <div className="obj-body">
                     <Heading
                         text={props.heading}
-                        font="Raleway"
+                        font="Montserrat"
                         size="1rem"
                         fontWeight={600}
                         maxWidth={"100%"}

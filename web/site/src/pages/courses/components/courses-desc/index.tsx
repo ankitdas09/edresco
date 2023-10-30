@@ -2,10 +2,10 @@ import Heading from "../../../../global/components/heading";
 import Space from "../../../../global/components/space";
 import CourseInfoCard from "./components/course-info-card";
 import "./styles/index.scss";
-
+const downloadLink = "https://google.com";
 const courseContent = [
     {
-        courseName: "PRE-FOUNDATION",
+        courseName: "DISHA",
         courseSubHeading: "12 MONTHS - CLASS 9",
         points: [
             "For students moving to 9th class",
@@ -15,7 +15,7 @@ const courseContent = [
         ],
     },
     {
-        courseName: "FOUNDATION",
+        courseName: "PARISHRAM",
         courseSubHeading: "12 MONTHS - CLASS 10",
         points: [
             "Well-designed program for students moving to 10th class",
@@ -35,7 +35,7 @@ const courseContent = [
         ],
     },
     {
-        courseName: "ACHIEVER",
+        courseName: "TARGET",
         courseSubHeading: "12 MONTHS - CLASS 12",
         points: [
             "Dynamic 1-year Program for students moving to 12th",
@@ -45,7 +45,7 @@ const courseContent = [
         ],
     },
     {
-        courseName: "TARGET",
+        courseName: "ACHIEVER",
         courseSubHeading: "12 MONTHS - DROPPER",
         points: [
             "Comprehensive 1-year program for 12th passed outs",
@@ -63,7 +63,7 @@ const CoursesDescSection = () => {
                     text="OUR COURSES"
                     color="#fff"
                     size="2rem"
-                    font="Raleway"
+                    font="Montserrat"
                     fontWeight={700}
                     maxWidth={600}
                     letterSpacing={6}
@@ -77,7 +77,26 @@ const CoursesDescSection = () => {
                     maxWidth={600}
                     center={true}
                 />
+                <Space amt={5} />
+                <p
+                    onClick={() => {
+                        window.open(downloadLink, "_blank");
+                    }}
+                >
+                    <Heading
+                        text="Download Information Brochure"
+                        color="#ffffff"
+                        size="1rem"
+                        font="PT Sans"
+                        fontWeight={800}
+                        maxWidth={600}
+                        center={true}
+                        underline={true}
+                        pointerCursor={true}
+                    />
+                </p>
                 <Space amt={20} />
+
                 <div className="line"></div>
             </div>
             <Space amt={30} />

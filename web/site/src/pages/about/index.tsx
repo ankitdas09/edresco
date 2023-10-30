@@ -27,7 +27,7 @@ const AboutPage = (props: PropTypes) => {
                             fontWeight={800}
                             size="0.75rem"
                             maxWidth={300}
-                            font="Raleway"
+                            font="Montserrat"
                             mLeft="3px"
                         />
                         <Space amt={10} />
@@ -40,7 +40,7 @@ const AboutPage = (props: PropTypes) => {
                             fontWeight={300}
                             size="2rem"
                             maxWidth={300}
-                            font="Raleway"
+                            font="Montserrat"
                         />
                         <Space amt={10} />
                         <Heading
@@ -68,7 +68,7 @@ const AboutPage = (props: PropTypes) => {
                             fontWeight={800}
                             size="0.75rem"
                             maxWidth={300}
-                            font="Raleway"
+                            font="Montserrat"
                             mLeft="3px"
                         />
                         <Space amt={10} />
@@ -80,7 +80,7 @@ const AboutPage = (props: PropTypes) => {
                             fontWeight={300}
                             size="2rem"
                             maxWidth={300}
-                            font="Raleway"
+                            font="Montserrat"
                         />
                         <Space amt={10} />
                         <Heading
@@ -113,7 +113,7 @@ const AboutPage = (props: PropTypes) => {
                             fontWeight={300}
                             size="2rem"
                             maxWidth={300}
-                            font="Raleway"
+                            font="Montserrat"
                         />
                         <Space amt={10} />
                         <Heading
@@ -163,7 +163,7 @@ const AboutPage = (props: PropTypes) => {
                             fontWeight={300}
                             size="2rem"
                             maxWidth={300}
-                            font="Raleway"
+                            font="Montserrat"
                         />
                         <Space amt={10} />
                         <Heading

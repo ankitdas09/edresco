@@ -34,10 +34,11 @@ const Card = (props: PropTypes) => {
             <Space amt={10} />
             <Heading
                 text={props.heading}
-                size="1.2rem"
+                size="1.35rem"
                 fontWeight={700}
                 maxWidth={200}
                 font={"PT Sans"}
+                center={true}
             />
             {props.subHeading && (
                 <Heading

@@ -7,13 +7,14 @@ interface PropTypes {
     size: string;
     fontWeight: number;
     maxWidth: number | string;
-    font: "Raleway" | "PT Sans";
+    font: "Montserrat" | "PT Sans";
     padding?: string;
     color?: string;
     letterSpacing?: number;
     center?: boolean;
     underline?: boolean;
     mLeft?: string;
+    pointerCursor?: boolean;
 }
 const Heading = (props: PropTypes) => {
     return (
@@ -30,6 +31,7 @@ const Heading = (props: PropTypes) => {
                 textAlign: props.center ? "center" : "left",
                 textDecoration: props.underline ? "underline" : "",
                 marginLeft: props.mLeft ? props.mLeft : "0",
+                cursor: props.pointerCursor === true ? "pointer" : "inherit",
             }}
         >
             {props.text}

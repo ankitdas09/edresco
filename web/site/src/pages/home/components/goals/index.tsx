@@ -21,39 +21,43 @@ const content: { heading: string; subheading: string; imgLink: string }[] = [
     },
     {
         heading: "Specialized Mentoring",
-        subheading: "Anonymous mentoring and counselling from IITian/NITian",
-        imgLink: "unlimited_access.png",
+        subheading: "Anonymous mentoring and counselling from IITian/NITians",
+        imgLink: "individualised_sessions.png",
     },
     {
-        heading: "Specialized Mentoring",
-        subheading: "Anonymous mentoring and counselling from IITian/NITian",
-        imgLink: "expert_teachers.png",
+        heading: "Competitive Exam Support",
+        subheading: "Special classes are designed for exams like Olympiads, NTSE etc.",
+        imgLink: "exam-support.png",
     },
 ];
 
 const GoalsSection = () => {
     return (
-        <div className="goals container">
-            <Heading
-                text="Achieve your goals with us!"
-                maxWidth={1300}
-                size="1.4rem"
-                fontWeight={700}
-                font={"Raleway"}
-                padding={"0 20px"}
-            />
-            <Space amt={30} />
-            <div className="card-container">
-                {content.map((c, idx) => (
-                    <Card
-                        width={350}
-                        height={180}
-                        heading={c.heading}
-                        subHeading={c.subheading}
-                        imgLink={c.imgLink}
-                        key={idx}
-                    />
-                ))}
+        <div className="container flex justify-center align-center">
+            <div className="goals">
+                <Heading
+                    text="Achieve your goals with us!"
+                    maxWidth={1300}
+                    size="1.8rem"
+                    fontWeight={600}
+                    font={"Montserrat"}
+                    padding={"0 20px"}
+                    color="#38632b"
+                    center={true}
+                />
+                <Space amt={10} />
+                <div className="card-container">
+                    {content.map((c, idx) => (
+                        <Card
+                            width={350}
+                            height={180}
+                            heading={c.heading}
+                            subHeading={c.subheading}
+                            imgLink={c.imgLink}
+                            key={idx}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

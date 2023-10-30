@@ -13,9 +13,9 @@ const StartPrepSection = () => {
             <div className="start-prep-left">
                 <Heading
                     text="Start the Preparations!"
-                    size="1.4rem"
+                    size="1.8rem"
                     fontWeight={600}
-                    font="Raleway"
+                    font="Montserrat"
                     maxWidth={1000}
                 />
                 <Space amt={24} />
@@ -46,8 +46,9 @@ const StartPrepSection = () => {
                 <Space amt={24} />
                 <Button
                     text="Join Now!"
-                    width={100}
-                    height={30}
+                    width={170}
+                    height={45}
+                    fontSize="1rem"
                     type="filled"
                     bgColor="#0056B8"
                     fgColor="#fff"
