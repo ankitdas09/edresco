@@ -55,6 +55,7 @@ const CourseInfoCard = ({
                     type="outlined"
                     bgColor="#0056B8"
                     fgColor="#0056B8"
+                    linkTo={`/info#${courseName.toLowerCase()}`}
                 />
                 <Space amt={30} />
             </div>

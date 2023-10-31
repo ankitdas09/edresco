@@ -1,13 +1,14 @@
 import Space from "../../../../global/components/space";
 
 import Heading from "../../../../global/components/heading";
+import Button from "../../../../global/components/btn";
 
 // interface PropTypes {
 //     width: number;
 //     height: number;
 // }
 
-const dishaBenefits = [
+const benefits = [
     {
         heading: "Excellent Faculty",
         text: "Highly Experienced and Dedicated Faculty members who help students in every aspect of their study life.",
@@ -18,12 +19,16 @@ const dishaBenefits = [
     },
     { heading: "Doubt Classes", text: "1 on 1 doubt classes are conducted for students." },
     {
-        heading: "Competitive Exam Support ",
-        text: "Special classes are designed for other exams like Olympiads, NTSE etc.",
+        heading: "Doubt Classes ",
+        text: "1 on 1 doubt classes are conducted for students.",
     },
     {
-        heading: "Discussion of Homework",
-        text: "After classroom teaching, homework is given to students, which is discussed in the next class of that particular subject.",
+        heading: "Board Improvement Program",
+        text: "Complete Syllabus Coverage from Board to Entrance Examinations. Special classes for the students who are improving in any subject of board.",
+    },
+    {
+        heading: "Competitive Exam Support",
+        text: "Special classes are designed for other exams like Olympiads, NTSE etc.",
     },
     {
         heading: "Chapterwise Practice Problems",
@@ -51,7 +56,7 @@ const dishaBenefits = [
     },
 ];
 
-const dishaSubjects = [
+const subjects = [
     "➢  General Science",
     "➢  General Mathematics",
     "➢  Social Science",
@@ -60,12 +65,19 @@ const dishaSubjects = [
     "➢  ADV. Mathematics/Sanskrit /Hindi",
 ];
 
-const DishaInfo = () => {
+const ParishramInfo = () => {
     // console.log(props);
     return (
-        <div className="container-sm" id="disha">
+        <div className="container-sm" id="PARISHRAM">
             <Heading
-                text="Why DISHA?"
+                text="Class X"
+                font="Montserrat"
+                size="1rem"
+                fontWeight={600}
+                maxWidth={"100%"}
+            />
+            <Heading
+                text="Why PARISHRAM?"
                 font="Montserrat"
                 size="1.8rem"
                 fontWeight={600}
@@ -73,16 +85,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <Heading
-                text="📚 DISHA Course is designed for the students moving from class 8th to 9th, aiming to establish a
-                    strong conceptual foundation. It is a scientifically designed classroom program to build the foundation
-                    systematically for various Engineering (IIT JEE Mains & IIT JEE Advanced) and Medical (NEET & AIIMS)
-                    Entrance Examinations as well as various other competitive Examinations like NTSE/JSTSE/KVPY and
-                    Olympiads. In the competitive world ahead, every year is important. students who succeed in
-                    JEE/NEET in the very first attempt itself, save it and invest this time in making their future brighter.
-                    Many of the chapters and concepts that are part of the JEE/NEET syllabus are introduced to the
-                    students in class 8th, class 9th & class 10th and taught in class 11th & class 12th. So, the best way is to
-                    start your IIT-JEE/NEET preparation from the beginning of class 8th. It’s never late with Edresco’s
-                    scientifically designed Foundation Two Years Classroom Program for Class 9th."
+                text="📚 'PARISHRAM' Course is specially designed for school boards and competitive exams like NEET, JEE Main, JEE Advanced etc. and helps students to easily adapt to the exponential increase in the level of academics in Class 11th & 12th. Class 10th is the crucial level in their life. Special attention is given to the NTSE & Board with specific batches with solely dedicated faculty members who foster them with all the minute details required for the exams. At the end, what we get is the PARISHRAM of our school study level."
                 font="PT Sans"
                 size="1rem"
                 fontWeight={400}
@@ -90,9 +93,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <Heading
-                text="📝This Program operates in alignment with school curriculum principles. Its primary objectives are
-                    to cover the NCERT syllabus comprehensively and to equip students with the knowledge required for
-                    competitive examinations."
+                text="📝 This program is based on school methodology. The main purpose is to cover NCERT syllabus & to provide them knowledge for competitive examinations."
                 font="PT Sans"
                 size="1rem"
                 fontWeight={400}
@@ -109,7 +110,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <ul>
-                {dishaBenefits.map((c, idx) => (
+                {benefits.map((c, idx) => (
                     <li key={idx}>
                         <Heading
                             text={c.heading}
@@ -131,7 +132,7 @@ const DishaInfo = () => {
             </ul>
             <Space amt={30} />
             <Heading
-                text="Subjects offered in DISHA"
+                text="Subjects offered in PARISHRAM"
                 font="Montserrat"
                 size="1.2rem"
                 fontWeight={600}
@@ -140,7 +141,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <ul>
-                {dishaSubjects.map((c, idx) => (
+                {subjects.map((c, idx) => (
                     <li key={idx}>
                         <Heading
                             text={c}
@@ -167,7 +168,7 @@ const DishaInfo = () => {
                 <li>
                     <Heading
                         text={
-                            "Classes will be conducted in the associated school in the form of a separate section; generally, from about 8:00 am to 4:00 pm for 6 days a week (exact schedule will depend upon the associated school."
+                            "Classes will be conducted in the associated school in the form of a separate section; generally, from about 8:00 am to 4:00 pm for 6 days a week (exact schedule will depend upon the associated school)."
                         }
                         font="PT Sans"
                         size="1rem"
@@ -177,8 +178,20 @@ const DishaInfo = () => {
                     {/* <Space amt={30} /> */}
                 </li>
             </ul>
+            <Space amt={60} />
+
+            <Button
+                text="Join Now!"
+                width={170}
+                height={45}
+                type="filled"
+                bgColor="#0056B8"
+                fgColor="#fff"
+                linkTo="/register"
+                fontSize="1.0rem"
+            />
         </div>
     );
 };
 
-export default DishaInfo;
+export default ParishramInfo;

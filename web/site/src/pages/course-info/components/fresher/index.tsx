@@ -8,7 +8,7 @@ import Button from "../../../../global/components/btn";
 //     height: number;
 // }
 
-const dishaBenefits = [
+const benefits = [
     {
         heading: "Excellent Faculty",
         text: "Highly Experienced and Dedicated Faculty members who help students in every aspect of their study life.",
@@ -19,12 +19,16 @@ const dishaBenefits = [
     },
     { heading: "Doubt Classes", text: "1 on 1 doubt classes are conducted for students." },
     {
-        heading: "Competitive Exam Support ",
-        text: "Special classes are designed for other exams like Olympiads, NTSE etc.",
+        heading: "Doubt Classes ",
+        text: "1 on 1 doubt classes are conducted for students.",
     },
     {
-        heading: "Discussion of Homework",
-        text: "After classroom teaching, homework is given to students, which is discussed in the next class of that particular subject.",
+        heading: "Board Improvement Program",
+        text: "Complete Syllabus Coverage from Board to Entrance Examinations. Special classes for the students who are improving in any subject of board.",
+    },
+    {
+        heading: "Competitive Exam Support",
+        text: "Special classes are designed for other exams like Olympiads, NTSE etc.",
     },
     {
         heading: "Chapterwise Practice Problems",
@@ -35,39 +39,41 @@ const dishaBenefits = [
         text: "Weekly Tests are conducted regularly, allowing students to solve all kinds of questions asked in the board exams and competitive exams.",
     },
     {
-        heading: "Motivational Sessions",
-        text: "There is provision of motivational classes within the curriculum which is required to keep the students on track and motivate them to aspire for success.",
+        heading: "Orientation Classes",
+        text: "Orientation classes are conducted for students to motivate them and make them familiar with the institute.",
     },
     {
-        heading: "Parent Teacher Student Meet",
-        text: "PTSM fosters regular communication between parents, teachers, and students, providing parents with insights into their child's strengths and weaknesses.",
+        heading: "Performance Tracker",
+        text: "Every student’s progress is tracked by giving a constant feedback on their performance in the tests.",
     },
     {
-        heading: "Student Relationship Manager (SRM)",
-        text: "It is basically a WhatsApp contact number dedicated to connecting with parents, providing updates, test schedules, homework information, student’s progress report, information about competitive  exams etc.",
-    },
-    {
-        heading: "Psychological cum Academic Counselling",
-        text: "Sometimes students get stuck with their personal problems and need guidance to overcome that situation. In such cases, we offer one-on-one counseling sessions and provide tailored solutions to assist them.",
+        heading: "Feedback System",
+        text: "Regular feedbacks are taken by the students in order to improve the learning process qualitatively and listen to all student’s queries.",
     },
 ];
 
-const dishaSubjects = [
-    "➢  General Science",
-    "➢  General Mathematics",
-    "➢  Social Science",
-    "➢  MIL (Assamese)",
+const subjects = [
+    "➢  Physics",
+    "➢  Chemistry",
+    "➢  Mathematics",
+    "➢  Biology",
+    "➢  (MIL) Assamese",
     "➢  English",
-    "➢  ADV. Mathematics/Sanskrit /Hindi",
 ];
 
-const DishaInfo = () => {
+const FresherInfo = () => {
     // console.log(props);
     return (
-        <div className="container-sm" id="DISHA">
-            <Heading text="Class X" font="PT Sans" size="1rem" fontWeight={800} maxWidth={"100%"} />
+        <div className="container-sm" id="FRESHER">
             <Heading
-                text="Why DISHA?"
+                text="Class XI"
+                font="Montserrat"
+                size="1rem"
+                fontWeight={600}
+                maxWidth={"100%"}
+            />
+            <Heading
+                text="Why FRESHER?"
                 font="Montserrat"
                 size="1.8rem"
                 fontWeight={600}
@@ -75,16 +81,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <Heading
-                text="📚 DISHA Course is designed for the students moving from class 8th to 9th, aiming to establish a
-                    strong conceptual foundation. It is a scientifically designed classroom program to build the foundation
-                    systematically for various Engineering (IIT JEE Mains & IIT JEE Advanced) and Medical (NEET & AIIMS)
-                    Entrance Examinations as well as various other competitive Examinations like NTSE/JSTSE/KVPY and
-                    Olympiads. In the competitive world ahead, every year is important. students who succeed in
-                    JEE/NEET in the very first attempt itself, save it and invest this time in making their future brighter.
-                    Many of the chapters and concepts that are part of the JEE/NEET syllabus are introduced to the
-                    students in class 8th, class 9th & class 10th and taught in class 11th & class 12th. So, the best way is to
-                    start your IIT-JEE/NEET preparation from the beginning of class 8th. It’s never late with Edresco’s
-                    scientifically designed Foundation Two Years Classroom Program for Class 9th."
+                text="📚 'FRESHER' Course is specially designed for giving an early advantage to the students by starting JEE/NEET preparation immediately after 10th Board Examination. This course places a distinct focus on building a strong foundation aligned with the JEE and NEET syllabus and pattern. Furthermore, students will receive comprehensive mentoring for their class 11th & 12th studies, coupled with targeted guidance for excelling in additional competitive exams like Olympiads etc."
                 font="PT Sans"
                 size="1rem"
                 fontWeight={400}
@@ -92,9 +89,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <Heading
-                text="📝This Program operates in alignment with school curriculum principles. Its primary objectives are
-                    to cover the NCERT syllabus comprehensively and to equip students with the knowledge required for
-                    competitive examinations."
+                text="📝 Students joining this program have more time to clear their fundamentals and practice extensively for JEE/NEET, their ultimate goal!"
                 font="PT Sans"
                 size="1rem"
                 fontWeight={400}
@@ -111,7 +106,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <ul>
-                {dishaBenefits.map((c, idx) => (
+                {benefits.map((c, idx) => (
                     <li key={idx}>
                         <Heading
                             text={c.heading}
@@ -133,7 +128,38 @@ const DishaInfo = () => {
             </ul>
             <Space amt={30} />
             <Heading
-                text="Subjects offered in DISHA"
+                text="What is an integrated school program?"
+                font="Montserrat"
+                size="1.2rem"
+                fontWeight={600}
+                maxWidth={"100%"}
+                underline={true}
+            />
+            <Space amt={30} />
+            <Heading
+                text="• A study program with a synergistic approach to both the School / Board studies as well as JEE Main & Advanced, NEET, Other Competitive Entrance Exams preparation."
+                font="PT Sans"
+                size="1rem"
+                fontWeight={400}
+                maxWidth={"100%"}
+            />
+            <Heading
+                text="• A study plan that will ease out the pressure of time (or the feeling for the lack of it) for the Student, unlocking lots of extra time, giving enough time for self-studies, which a Student would not have got otherwise and also giving him sufficient time for co-curricular activities, self-study, sports, social activities etc. which are so important for his / her personality development."
+                font="PT Sans"
+                size="1rem"
+                fontWeight={400}
+                maxWidth={"100%"}
+            />
+            <Heading
+                text="• A program that eliminates the opposite pressure forces on the Student."
+                font="PT Sans"
+                size="1rem"
+                fontWeight={400}
+                maxWidth={"100%"}
+            />
+            <Space amt={30} />
+            <Heading
+                text="Subjects Offered in FRESHER - Two Year Integrated School Program:"
                 font="Montserrat"
                 size="1.2rem"
                 fontWeight={600}
@@ -142,7 +168,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <ul>
-                {dishaSubjects.map((c, idx) => (
+                {subjects.map((c, idx) => (
                     <li key={idx}>
                         <Heading
                             text={c}
@@ -169,7 +195,7 @@ const DishaInfo = () => {
                 <li>
                     <Heading
                         text={
-                            "Classes will be conducted in the associated school in the form of a separate section; generally, from about 8:00 am to 4:00 pm for 6 days a week (exact schedule will depend upon the associated school."
+                            "Classes will be conducted in the associated school in the form of a separate section; generally, from about 8:00 am to 4:00 pm for 6 days a week (exact schedule will depend upon the associated school)."
                         }
                         font="PT Sans"
                         size="1rem"
@@ -179,7 +205,8 @@ const DishaInfo = () => {
                     {/* <Space amt={30} /> */}
                 </li>
             </ul>
-            <Space amt={30} />
+            <Space amt={60} />
+
             <Button
                 text="Join Now!"
                 width={170}
@@ -194,4 +221,4 @@ const DishaInfo = () => {
     );
 };
 
-export default DishaInfo;
+export default FresherInfo;
