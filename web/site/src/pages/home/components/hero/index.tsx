@@ -11,7 +11,7 @@ const absIcons = [
     { top: "200px", left: "1260px", icon: "./abs-icons/Group (8).png" },
     { top: "360px", left: "1100px", icon: "./abs-icons/Group (10).png" },
     { top: "350px", left: "500px", icon: "./abs-icons/Group (11).png" },
-    { top: "380px", left: "200px", icon: "./abs-icons/Group (13).png" },
+    { top: "360px", left: "200px", icon: "./abs-icons/Group (13).png" },
     { top: "350px", left: "-35px", icon: "./abs-icons/Group (7).png" },
 ];
 

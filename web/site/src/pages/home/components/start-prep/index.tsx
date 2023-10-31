@@ -8,14 +8,14 @@ import "./styles/index.scss";
 
 const content = ["Disha", "Parishram", "Fresher", "Achiever", "Target"];
 const absIcons = [
-    { top: "0", left: "0px", icon: "./abs-icons/Group 380.png" },
-    { top: "20px", left: "240px", icon: "./abs-icons/abs-icon.png" },
+    { top: "20px", left: "20px", icon: "./abs-icons/Group 380.png" },
+    { top: "120px", left: "240px", icon: "./abs-icons/abs-icon.png" },
     { top: "40px", left: "480px", icon: "./abs-icons/abs-icon2.png" },
     { top: "20px", left: "1260px", icon: "./abs-icons/Group (6).png" },
-    { top: "200px", left: "1260px", icon: "./abs-icons/Group (8).png" },
+    { top: "200px", left: "1200px", icon: "./abs-icons/Group (8).png" },
     { top: "360px", left: "1100px", icon: "./abs-icons/Group (10).png" },
-    { top: "350px", left: "500px", icon: "./abs-icons/Group (11).png" },
-    { top: "380px", left: "200px", icon: "./abs-icons/Group (13).png" },
+    { top: "450px", left: "500px", icon: "./abs-icons/Group (11).png" },
+    { top: "540px", left: "200px", icon: "./abs-icons/Group (13).png" },
     { top: "350px", left: "35px", icon: "./abs-icons/Group (7).png" },
 ];
 
@@ -71,7 +71,7 @@ const StartPrepSection = () => {
                 />
             </div>
             <div className="start-prep-right">
-                <div className="flex justify-center align-center">
+                <div className="flex justify-center align-center column-on-mobile">
                     <div className="course-card-right-triple">
                         <CourseCard
                             text={content[0]}

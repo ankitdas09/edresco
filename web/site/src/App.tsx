@@ -7,6 +7,7 @@ import ScholarshipPage from "./pages/scholarship";
 import ContactPage from "./pages/contact";
 import RegisterPage from "./pages/register";
 import AboutPage from "./pages/about";
+import CourseInfoPage from "./pages/course-info";
 
 function App() {
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -41,6 +42,10 @@ function App() {
         {
             path: "/register",
             element: <RegisterPage />,
+        },
+        {
+            path: "/info",
+            element: <CourseInfoPage width={screenSize.width} height={screenSize.height} />,
         },
     ]);
 
