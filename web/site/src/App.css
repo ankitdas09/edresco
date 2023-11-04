@@ -12,6 +12,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.flex-4{
+  flex: 4;
+}
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;

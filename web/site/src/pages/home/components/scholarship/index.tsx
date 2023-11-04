@@ -6,7 +6,7 @@ const ScholarshipSection = () => {
         <div
             className="scholarship-section container"
             onClick={() => {
-                navigate("scholarship");
+                navigate("/scholarship");
             }}
         >
             <div className="scholarship-cover container p0"></div>

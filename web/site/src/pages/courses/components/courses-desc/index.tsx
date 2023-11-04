@@ -35,7 +35,7 @@ const courseContent = [
         ],
     },
     {
-        courseName: "ACHIEVER",
+        courseName: "TARGET",
         courseSubHeading: "12 MONTHS - CLASS 12",
         points: [
             "Dynamic 1-year Program for students moving to 12th",
@@ -45,7 +45,7 @@ const courseContent = [
         ],
     },
     {
-        courseName: "TARGET",
+        courseName: "ACHIEVER",
         courseSubHeading: "12 MONTHS - DROPPER",
         points: [
             "Comprehensive 1-year program for 12th passed outs",

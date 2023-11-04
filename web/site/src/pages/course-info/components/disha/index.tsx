@@ -8,7 +8,7 @@ import Button from "../../../../global/components/btn";
 //     height: number;
 // }
 
-const dishaBenefits = [
+const benefits = [
     {
         heading: "Excellent Faculty",
         text: "Highly Experienced and Dedicated Faculty members who help students in every aspect of their study life.",
@@ -52,7 +52,7 @@ const dishaBenefits = [
     },
 ];
 
-const dishaSubjects = [
+const subjects = [
     "➢  General Science",
     "➢  General Mathematics",
     "➢  Social Science",
@@ -62,7 +62,6 @@ const dishaSubjects = [
 ];
 
 const DishaInfo = () => {
-    // console.log(props);
     return (
         <div className="container-sm" id="DISHA">
             <Heading text="Class X" font="PT Sans" size="1rem" fontWeight={800} maxWidth={"100%"} />
@@ -110,9 +109,9 @@ const DishaInfo = () => {
                 underline={true}
             />
             <Space amt={30} />
-            <ul>
-                {dishaBenefits.map((c, idx) => (
-                    <li key={idx}>
+            <ul className="benefits-container">
+                {benefits.map((c, idx) => (
+                    <li key={idx} className="benefit-card">
                         <Heading
                             text={c.heading}
                             font="Montserrat"
@@ -142,7 +141,7 @@ const DishaInfo = () => {
             />
             <Space amt={30} />
             <ul>
-                {dishaSubjects.map((c, idx) => (
+                {subjects.map((c, idx) => (
                     <li key={idx}>
                         <Heading
                             text={c}

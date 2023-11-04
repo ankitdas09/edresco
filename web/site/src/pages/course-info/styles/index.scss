@@ -2,6 +2,18 @@
 .about-left, .about-right{
   margin: 0px 20px;
 }
+.benefits-container{
+  display: flex;
+  flex-wrap: wrap;
+  .benefit-card{
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #000;
+    &:first-child{
+      
+    }
+  }
+}
 @media screen and (max-width: 600px) {
 
   

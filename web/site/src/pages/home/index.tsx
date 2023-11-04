@@ -26,11 +26,11 @@ const HomePage = (props: PropTypes) => {
             <HeroSection />
             {/* {props.width >= 600 ? <Space amt={30} /> : <Space amt={60} />} */}
             <GoalsSection />
-            {props.width >= 600 ? <Space amt={100} /> : <Space amt={60} />}
+            {props.width >= 600 ? <Space amt={30} /> : <Space amt={30} />}
             <WhySection />
-            {props.width >= 600 ? <Space amt={100} /> : <Space amt={60} />}
+            {props.width >= 600 ? <Space amt={30} /> : <Space amt={30} />}
             <StartPrepSection />
-            {props.width >= 600 ? <Space amt={100} /> : <Space amt={60} />}
+            {props.width >= 600 ? <Space amt={30} /> : <Space amt={30} />}
             <ScholarshipSection />
             {props.width >= 600 ? <Space amt={30} /> : <Space amt={15} />}
             <Footer />
