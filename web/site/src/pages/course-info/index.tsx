@@ -23,7 +23,8 @@ const CourseInfoPage = (props: PropTypes) => {
         <section className="">
             <ScrollToTop />
             <NavBar />
-            <Space amt={60} />
+            {/* <Space amt={60} /> */}
+
             {!allPagesMeta.includes(location.hash.toLowerCase()) ? (
                 <>
                     <DishaInfo />

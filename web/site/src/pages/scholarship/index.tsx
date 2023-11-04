@@ -18,7 +18,7 @@ const content = [
         heading: "Exposure",
         subHeading: "Top performing students get a chance to visit ISRO/IITs/AIIMSs free of cost",
     },
-    { heading: "Upto â‚¹1,00,000", subHeading: "Cash prize at national level" },
+    { heading: "Upto Rs.1,00,000", subHeading: "Cash prize at national level" },
     { heading: "Media Coverage", subHeading: "At local and national level" },
     { heading: "Top 3", subHeading: "Exciting Prizes & Goodies" },
     { heading: "Participation", subHeading: "Certificate for all" },
@@ -27,22 +27,22 @@ const contentObj = [
     {
         heading: "Centralized Exam",
         text: "E.A.S.T. offers a unified test for students from diverse backgrounds, ensuring fairness in opportunities based on performance.",
-        img: "centralized-exam.png",
+        img: "guidance.svg",
     },
     {
         heading: "Education Equity",
         text: "E.A.S.T. narrows the education gap by supporting talented students regardless of their socio-economic status.",
-        img: "education-equity.png",
+        img: "a-grade.svg",
     },
     {
         heading: "Guidance Hub",
         text: "E.A.S.T. provides valuable insights into learning paths and career options, helping students make informed choices.",
-        img: "guidance-hub.png",
+        img: "coaching.svg",
     },
     {
         heading: "Recognition Platform",
         text: "E.A.S.T. celebrates students' achievements beyond academics, motivating excellence in various fields.",
-        img: "recognition-platform.png",
+        img: "face-recognition.svg",
     },
 ];
 

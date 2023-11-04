@@ -1,4 +1,5 @@
 import Heading from "../../../../../../global/components/heading";
+
 import "./styles/index.scss";
 
 interface PropTypes {
