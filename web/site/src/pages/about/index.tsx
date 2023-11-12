@@ -6,11 +6,23 @@ import Footer from "../../global/components/footer";
 
 import ScrollToTop from "../../scrollToTop";
 import Heading from "../../global/components/heading";
+import { motion } from "framer-motion";
 interface PropTypes {
     width: number;
     height: number;
 }
 
+<motion.div
+    // ref={goalsRef}
+    variants={{
+        initial: { opacity: 0, y: "100" },
+        final: { opacity: 1, y: 0 },
+    }}
+    initial="initial"
+    whileInView="final"
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+></motion.div>;
 const AboutPage = (props: PropTypes) => {
     console.log(props);
     return (
@@ -19,7 +31,7 @@ const AboutPage = (props: PropTypes) => {
             <NavBar />
             <Space amt={30} />
             <div className="container-sm">
-                <div className="flex justify-center align-center column-on-mobile">
+                <motion.div className="flex justify-center align-center column-on-mobile">
                     <div className="about-left flex-3">
                         <Heading
                             text="ABOUT US"
@@ -55,7 +67,7 @@ const AboutPage = (props: PropTypes) => {
                     <div className="about-right flex-2">
                         <img src="11.png" className="img-fluid" />
                     </div>
-                </div>
+                </motion.div>
                 <div className="flex justify-center align-center">
                     <div className="line"></div>
                 </div>
@@ -120,7 +132,17 @@ const AboutPage = (props: PropTypes) => {
                 <div className="bg-triangle-container">
                     <img src="./bg-triangle.png" />
                 </div>
-                <div className="container-sm">
+                <motion.div
+                    className="container-sm"
+                    variants={{
+                        initial: { opacity: 0, y: "100" },
+                        final: { opacity: 1, y: 0 },
+                    }}
+                    initial="initial"
+                    whileInView="final"
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                >
                     <Space amt={12} />
                     <div className="flex justify-center align-start column-on-mobile">
                         <div className="about-left flex-3">
@@ -192,7 +214,7 @@ const AboutPage = (props: PropTypes) => {
                     <div className="bg-triangle-container down">
                         <img src="./bg-triangle2.png" />
                     </div>
-                </div>
+                </motion.div>
             </div>
             {/* <Space amt={60} /> */}
             <div className="bg-about-highlight-2">

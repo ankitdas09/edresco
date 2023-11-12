@@ -8,12 +8,19 @@ import StartPrepSection from "./components/start-prep";
 import ScholarshipSection from "./components/scholarship";
 import Footer from "../../global/components/footer";
 import ScrollToTop from "../../scrollToTop";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 interface PropTypes {
     width: number;
     height: number;
 }
 
 const HomePage = (props: PropTypes) => {
+    // const goalsRef = useRef(null);
+    // const goalsInView = useInView(goalsRef, { once: true });
+
+    useEffect(() => {}, []);
+
     return (
         <section
             style={{
@@ -22,16 +29,63 @@ const HomePage = (props: PropTypes) => {
         >
             <ScrollToTop />
             <NavBar />
-            {/* {props.width >= 600 ? <Space amt={60} /> : <Space amt={30} />} */}
             <HeroSection />
+            <motion.div
+                // ref={goalsRef}
+                variants={{
+                    initial: { opacity: 0.3, y: "150" },
+                    final: { opacity: 1, y: 0 },
+                }}
+                initial="initial"
+                animate="final"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+            >
+                {props.width >= 600 ? <Space amt={30} /> : <Space amt={30} />}
+                <GoalsSection />
+            </motion.div>
+            <motion.div
+                // ref={goalsRef}
+                variants={{
+                    initial: { opacity: 0, y: "100" },
+                    final: { opacity: 1, y: 0 },
+                }}
+                initial="initial"
+                whileInView="final"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+            >
+                <WhySection />
+            </motion.div>
             {/* {props.width >= 600 ? <Space amt={30} /> : <Space amt={60} />} */}
-            <GoalsSection />
             {props.width >= 600 ? <Space amt={30} /> : <Space amt={30} />}
-            <WhySection />
+            <motion.div
+                // ref={goalsRef}
+                variants={{
+                    initial: { opacity: 0, y: "100" },
+                    final: { opacity: 1, y: 0 },
+                }}
+                initial="initial"
+                whileInView="final"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+            >
+                <StartPrepSection />
+            </motion.div>
             {props.width >= 600 ? <Space amt={30} /> : <Space amt={30} />}
-            <StartPrepSection />
-            {props.width >= 600 ? <Space amt={30} /> : <Space amt={30} />}
-            <ScholarshipSection />
+            <motion.div
+                // ref={goalsRef}
+                variants={{
+                    initial: { opacity: 0, y: "100" },
+                    final: { opacity: 1, y: 0 },
+                }}
+                initial="initial"
+                whileInView="final"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+            >
+                <ScholarshipSection />
+            </motion.div>
             {props.width >= 600 ? <Space amt={30} /> : <Space amt={15} />}
             <Footer />
         </section>
