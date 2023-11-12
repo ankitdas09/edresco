@@ -1,6 +1,5 @@
 import NavBar from "../../global/components/navbar";
 import "./styles/index.scss";
-import Space from "../../global/components/space";
 
 import Footer from "../../global/components/footer";
 import ScrollToTop from "../../scrollToTop";
@@ -41,13 +40,13 @@ const CourseInfoPage = (props: PropTypes) => {
             ) : (
                 <>
                     {location.hash.toLowerCase() === "#disha" && <DishaInfo />}
-                    <Space amt={60} />
+                    {/* <Space amt={60} /> */}
                     {location.hash.toLowerCase() === "#parishram" && <ParishramInfo />}
-                    <Space amt={60} />
+                    {/* <Space amt={60} /> */}
                     {location.hash.toLowerCase() === "#fresher" && <FresherInfo />}
-                    <Space amt={60} />
+                    {/* <Space amt={60} /> */}
                     {location.hash.toLowerCase() === "#target" && <TargetInfo />}
-                    <Space amt={60} />
+                    {/* <Space amt={60} /> */}
                 </>
             )}
             <Footer />

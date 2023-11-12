@@ -12,16 +12,37 @@ interface PropTypes {
 }
 
 const content = [
-    { heading: "Upto 100% Scholarship", subHeading: "Based on E.A.S.T. Exam" },
-    { heading: "10 out of 100", subHeading: "Free coaching for competitive Exam" },
+    {
+        heading: "Upto 100% Scholarship",
+        subHeading: "Based on E.A.S.T. Exam",
+        img: "/scholarship-icons/15.png",
+    },
+    {
+        heading: "10 out of 100",
+        subHeading: "Free coaching for competitive Exam",
+        img: "/scholarship-icons/16.png",
+    },
     {
         heading: "Exposure",
         subHeading: "Top performing students get a chance to visit ISRO/IITs/AIIMSs free of cost",
+        img: "/scholarship-icons/19.png",
     },
-    { heading: "Upto Rs.1,00,000", subHeading: "Cash prize at national level" },
-    { heading: "Media Coverage", subHeading: "At local and national level" },
-    { heading: "Top 3", subHeading: "Exciting Prizes & Goodies" },
-    { heading: "Participation", subHeading: "Certificate for all" },
+    {
+        heading: "Upto Rs.1,00,000",
+        subHeading: "Cash prize at national level",
+        img: "/scholarship-icons/20.png",
+    },
+    {
+        heading: "Media Coverage",
+        subHeading: "At local and national level",
+        img: "/scholarship-icons/18.png",
+    },
+    { heading: "Top 3", subHeading: "Exciting Prizes & Goodies", img: "/scholarship-icons/17.png" },
+    {
+        heading: "Participation",
+        subHeading: "Certificate for all",
+        img: "/scholarship-icons/certificate.svg",
+    },
 ];
 const contentObj = [
     {
@@ -121,22 +142,27 @@ const ScholarshipPage = (props: PropTypes) => {
                     <div className="east-benefits-card-container flex justify-center align-center wrap">
                         {content.map((c) => (
                             <div className="east-benefit-card bg-white drop-shadow rounded-rectangle flex flex-column justify-center align-center hover-effect">
-                                <Heading
-                                    text={c.heading}
-                                    font="PT Sans"
-                                    size="1.14rem"
-                                    fontWeight={800}
-                                    maxWidth={280}
-                                    center={true}
-                                />
-                                <Heading
-                                    text={c.subHeading}
-                                    font="PT Sans"
-                                    size="0.9rem"
-                                    fontWeight={500}
-                                    maxWidth={260}
-                                    center={true}
-                                />
+                                <div className="top">
+                                    <img src={c.img} alt="" />
+                                </div>
+                                <div className="bottom">
+                                    <Heading
+                                        text={c.heading}
+                                        font="PT Sans"
+                                        size="1.14rem"
+                                        fontWeight={800}
+                                        maxWidth={280}
+                                        center={true}
+                                    />
+                                    <Heading
+                                        text={c.subHeading}
+                                        font="PT Sans"
+                                        size="0.9rem"
+                                        fontWeight={500}
+                                        maxWidth={260}
+                                        center={true}
+                                    />
+                                </div>
                             </div>
                         ))}
                     </div>

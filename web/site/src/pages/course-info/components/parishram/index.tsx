@@ -2,6 +2,7 @@ import Space from "../../../../global/components/space";
 
 import Heading from "../../../../global/components/heading";
 import Button from "../../../../global/components/btn";
+import AbsIcon from "../../../../global/components/abs-icon";
 
 // interface PropTypes {
 //     width: number;
@@ -65,86 +66,134 @@ const subjects = [
     "➢  ADV. Mathematics/Sanskrit /Hindi",
 ];
 
-const ParishramInfo = () => {
-    // console.log(props);
+const absIcons = [
+    { top: "0", left: "0px", icon: "./abs-icons/Group 380.png" },
+    { top: "20px", left: "240px", icon: "./abs-icons/abs-icon.png" },
+    { top: "-40px", left: "480px", icon: "./abs-icons/abs-icon2.png" },
+    { top: "-20px", left: "1260px", icon: "./abs-icons/Group (6).png" },
+    { top: "200px", left: "1260px", icon: "./abs-icons/Group (8).png" },
+    { top: "360px", left: "1100px", icon: "./abs-icons/Group (10).png" },
+    { top: "350px", left: "500px", icon: "./abs-icons/Group (11).png" },
+    { top: "360px", left: "200px", icon: "./abs-icons/Group (13).png" },
+    { top: "350px", left: "-35px", icon: "./abs-icons/Group (7).png" },
+];
+const DishaInfo = () => {
     return (
-        <div className="container-sm" id="PARISHRAM">
-            <Heading
-                text="Class X"
-                font="Montserrat"
-                size="1rem"
-                fontWeight={600}
-                maxWidth={"100%"}
-            />
-            <Heading
-                text="Why PARISHRAM?"
-                font="Montserrat"
-                size="1.8rem"
-                fontWeight={600}
-                maxWidth={"100%"}
-            />
-            <Space amt={30} />
-            <Heading
-                text="📚 'PARISHRAM' Course is specially designed for school boards and competitive exams like NEET, JEE Main, JEE Advanced etc. and helps students to easily adapt to the exponential increase in the level of academics in Class 11th & 12th. Class 10th is the crucial level in their life. Special attention is given to the NTSE & Board with specific batches with solely dedicated faculty members who foster them with all the minute details required for the exams. At the end, what we get is the PARISHRAM of our school study level."
-                font="PT Sans"
-                size="1rem"
-                fontWeight={400}
-                maxWidth={"800px"}
-            />
-            <Space amt={30} />
-            <Heading
-                text="📝 This program is based on school methodology. The main purpose is to cover NCERT syllabus & to provide them knowledge for competitive examinations."
-                font="PT Sans"
-                size="1rem"
-                fontWeight={400}
-                maxWidth={"800"}
-            />
-            <Space amt={30} />
-            <Heading
-                text="What are the Course Benefits?"
-                font="Montserrat"
-                size="1.2rem"
-                fontWeight={600}
-                maxWidth={"100%"}
-                underline={true}
-            />
-            <Space amt={30} />
-            <ul>
-                {benefits.map((c, idx) => (
-                    <li key={idx}>
+        <>
+            <div className="bg-course-info">
+                {absIcons.map((c) => {
+                    return <AbsIcon top={c.top} left={c.left} icon={c.icon} />;
+                })}
+                <div className="container-sm" id="DISHA">
+                    <Heading
+                        text="Class X"
+                        font="Montserrat"
+                        size="1rem"
+                        fontWeight={600}
+                        maxWidth={"100%"}
+                    />
+                    <Heading
+                        text="Why PARISHRAM?"
+                        font="Montserrat"
+                        size="2rem"
+                        fontWeight={600}
+                        maxWidth={"100%"}
+                    />
+                    <Space amt={30} />
+                    <div className="border">
                         <Heading
-                            text={c.heading}
-                            font="Montserrat"
-                            size="1rem"
-                            fontWeight={600}
-                            maxWidth={"100%"}
-                        />
-                        <Heading
-                            text={c.text}
+                            text="📚 'PARISHRAM' Course is specially designed for school boards and competitive exams like NEET, JEE Main, JEE Advanced etc. and helps students to easily adapt to the exponential increase in the level of academics in Class 11th & 12th. Class 10th is the crucial level in their life. Special attention is given to the NTSE & Board with specific batches with solely dedicated faculty members who foster them with all the minute details required for the exams. At the end, what we get is the PARISHRAM of our school study level."
                             font="PT Sans"
-                            size="0.9rem"
+                            size="1.2rem"
                             fontWeight={400}
                             maxWidth={"800px"}
                         />
                         <Space amt={30} />
-                    </li>
-                ))}
-            </ul>
-            <Space amt={30} />
-            <Heading
-                text="Subjects offered in PARISHRAM"
-                font="Montserrat"
-                size="1.2rem"
-                fontWeight={600}
-                maxWidth={"100%"}
-                underline={true}
-            />
-            <Space amt={30} />
-            <ul>
-                {subjects.map((c, idx) => (
-                    <li key={idx}>
                         <Heading
-                            text={c}
+                            text="📝 This program is based on school methodology. The main purpose is to cover NCERT syllabus & to provide them knowledge for competitive examinations."
+                            font="PT Sans"
+                            size="1.2rem"
+                            fontWeight={400}
+                            maxWidth={"800px"}
+                        />
+                        <Space amt={30} />
+                    </div>
+                    <Space amt={50} />
+                </div>
+            </div>
+            <div className="container-sm">
+                <Space amt={30} />
+                <Heading
+                    text="What are the Course Benefits?"
+                    font="Montserrat"
+                    size="1.5rem"
+                    fontWeight={600}
+                    maxWidth={"100%"}
+                    underline={true}
+                />
+                <Space amt={30} />
+                <ul className="benefits-container">
+                    {benefits.map((c, idx) => (
+                        <li key={idx} className="benefit-card">
+                            <Heading
+                                text={c.heading}
+                                font="Montserrat"
+                                size="1rem"
+                                fontWeight={600}
+                                maxWidth={"100%"}
+                            />
+                            <Space amt={10} />
+                            <Heading
+                                text={c.text}
+                                font="PT Sans"
+                                size="0.9rem"
+                                fontWeight={400}
+                                maxWidth={"800px"}
+                            />
+                            <Space amt={30} />
+                        </li>
+                    ))}
+                </ul>
+                <Space amt={30} />
+                <Heading
+                    text="Subjects offered in Parishram"
+                    font="Montserrat"
+                    size="1.5rem"
+                    fontWeight={600}
+                    maxWidth={"100%"}
+                    underline={true}
+                />
+                <Space amt={30} />
+                <ul>
+                    {subjects.map((c, idx) => (
+                        <li key={idx}>
+                            <Heading
+                                text={c}
+                                font="PT Sans"
+                                size="1rem"
+                                fontWeight={400}
+                                maxWidth={"100%"}
+                            />
+                            {/* <Space amt={30} /> */}
+                        </li>
+                    ))}
+                </ul>
+                <Space amt={30} />
+                <Heading
+                    text="Class Schedule & Frequency:"
+                    font="Montserrat"
+                    size="1.2rem"
+                    fontWeight={600}
+                    maxWidth={"100%"}
+                    underline={true}
+                />
+                <Space amt={30} />
+                <ul>
+                    <li>
+                        <Heading
+                            text={
+                                "Classes will be conducted in the associated school in the form of a separate section; generally, from about 8:00 am to 4:00 pm for 6 days a week (exact schedule will depend upon the associated school)."
+                            }
                             font="PT Sans"
                             size="1rem"
                             fontWeight={400}
@@ -152,46 +201,22 @@ const ParishramInfo = () => {
                         />
                         {/* <Space amt={30} /> */}
                     </li>
-                ))}
-            </ul>
-            <Space amt={30} />
-            <Heading
-                text="Class Schedule & Frequency:"
-                font="Montserrat"
-                size="1.2rem"
-                fontWeight={600}
-                maxWidth={"100%"}
-                underline={true}
-            />
-            <Space amt={30} />
-            <ul>
-                <li>
-                    <Heading
-                        text={
-                            "Classes will be conducted in the associated school in the form of a separate section; generally, from about 8:00 am to 4:00 pm for 6 days a week (exact schedule will depend upon the associated school)."
-                        }
-                        font="PT Sans"
-                        size="1rem"
-                        fontWeight={400}
-                        maxWidth={"100%"}
-                    />
-                    {/* <Space amt={30} /> */}
-                </li>
-            </ul>
-            <Space amt={60} />
+                </ul>
+                <Space amt={60} />
 
-            <Button
-                text="Join Now!"
-                width={170}
-                height={45}
-                type="filled"
-                bgColor="#0056B8"
-                fgColor="#fff"
-                linkTo="/register"
-                fontSize="1.0rem"
-            />
-        </div>
+                <Button
+                    text="Join Now!"
+                    width={170}
+                    height={45}
+                    type="filled"
+                    bgColor="#0056B8"
+                    fgColor="#fff"
+                    linkTo="/register"
+                    fontSize="1.0rem"
+                />
+            </div>
+        </>
     );
 };
 
-export default ParishramInfo;
+export default DishaInfo;

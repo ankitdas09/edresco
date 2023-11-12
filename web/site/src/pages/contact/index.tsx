@@ -114,7 +114,80 @@ const ContactPage = (props: PropTypes) => {
                         ))}
                     </div>
                 </div>
+                <Space amt={60} />
+                <Heading
+                    text="Our Branches"
+                    font="Montserrat"
+                    fontWeight={700}
+                    size="1.2rem"
+                    maxWidth={"100%"}
+                    center={true}
+                />
+                <Space amt={30} />
+                <div className="branches-container flex column-on-mobile">
+                    <div className="flex-1 m-10">
+                        <div className="branch-img">
+                            <img src="map.webp" alt="" style={{ width: "100%" }} />
+                        </div>
+                        <div className="branch-details">
+                            <Space amt={10} />
+                            <Heading
+                                text="Branch 1"
+                                font="PT Sans"
+                                fontWeight={600}
+                                size="1.05rem"
+                                maxWidth={"80%"}
+                            />
+                            <Heading
+                                text="2nd floor,Arunodoi Path, Srimantapur Guwahati, Kamrup Metro, Assam, 781032 India"
+                                fontWeight={400}
+                                font="PT Sans"
+                                size="1rem"
+                                maxWidth={"80%"}
+                            />
+                            <Space amt={10} />
+                            <Heading
+                                text="Phone: +91-7670070767"
+                                fontWeight={400}
+                                font="PT Sans"
+                                size="1rem"
+                                maxWidth={"80%"}
+                            />
+                        </div>
+                    </div>
+                    <div className="flex-1 m-10">
+                        <div className="branch-img">
+                            <img src="map.webp" alt="" style={{ width: "100%" }} />
+                        </div>
+                        <div className="branch-details">
+                            <Space amt={10} />
+                            <Heading
+                                text="Branch 2"
+                                font="PT Sans"
+                                fontWeight={600}
+                                size="1.05rem"
+                                maxWidth={"80%"}
+                            />
+                            <Heading
+                                text="2nd floor,Arunodoi Path, Srimantapur Guwahati, Kamrup Metro, Assam, 781032 India"
+                                fontWeight={400}
+                                font="PT Sans"
+                                size="1rem"
+                                maxWidth={"80%"}
+                            />
+                            <Space amt={10} />
+                            <Heading
+                                text="Phone: +91-7670070767"
+                                fontWeight={400}
+                                font="PT Sans"
+                                size="1rem"
+                                maxWidth={"80%"}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <Space amt={45} />
             <Footer />
         </section>

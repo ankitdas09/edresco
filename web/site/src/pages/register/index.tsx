@@ -42,6 +42,20 @@ const RegisterPage = () => {
     return (
         <section className="bg-register flex justify-center align-center">
             <div className="main-register-container rounded-rectangle drop-shadow flex flex-column justify-center align-center">
+                <div className="back-btn-container flex w-100 ">
+                    <div
+                        className="back-img"
+                        style={{
+                            width: "36px",
+                            cursor: "pointer",
+                        }}
+                        onClick={() => {
+                            window.history.back();
+                        }}
+                    >
+                        <img src="back-icon.png" style={{ width: "100%" }} />
+                    </div>
+                </div>
                 {!submitted ? (
                     <>
                         <Space amt={10} />
