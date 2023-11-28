@@ -28,7 +28,7 @@ const AboutPage = (props: PropTypes) => {
     return (
         <section className="">
             <ScrollToTop />
-            <NavBar />
+            <NavBar variant="white" />
             <Space amt={30} />
             <div className="container-sm">
                 <motion.div className="flex justify-center align-center column-on-mobile">

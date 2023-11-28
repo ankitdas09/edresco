@@ -26,7 +26,7 @@ const ContactPage = (props: PropTypes) => {
     return (
         <section className="">
             <ScrollToTop />
-            <NavBar />
+            <NavBar variant="white" />
             <div className="container-sm">
                 <Space amt={20} />
                 <div className="contact-main-container flex justify-center align-center">

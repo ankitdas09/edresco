@@ -71,7 +71,7 @@ const ScholarshipPage = (props: PropTypes) => {
     return (
         <section className="bg-blue">
             <ScrollToTop />
-            <NavBar />
+            <NavBar variant="white" />
             {props.width >= 600 ? <Space amt={80} /> : <Space amt={0} />}
             <div className="container bg-white drop-shadow rounded-rectangle">
                 <div className="flex justify-around align-center east-container">

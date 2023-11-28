@@ -8,18 +8,25 @@ import StartPrepSection from "./components/start-prep";
 import ScholarshipSection from "./components/scholarship";
 import Footer from "../../global/components/footer";
 import ScrollToTop from "../../scrollToTop";
-import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 interface PropTypes {
     width: number;
     height: number;
 }
-
+// interface IVariant{}
 const HomePage = (props: PropTypes) => {
-    // const goalsRef = useRef(null);
-    // const goalsInView = useInView(goalsRef, { once: true });
+    const navAnimateRef = useRef(null);
+    const navAnimateTriggerInView = useInView(navAnimateRef, {});
+    const [variant, setVariant] = useState<"beige" | "white">("beige");
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        if (navAnimateTriggerInView) {
+            setVariant("white");
+        } else {
+            setVariant("beige");
+        }
+    }, [navAnimateTriggerInView]);
 
     return (
         <section
@@ -28,7 +35,7 @@ const HomePage = (props: PropTypes) => {
             }}
         >
             <ScrollToTop />
-            <NavBar />
+            <NavBar variant={variant} />
             <HeroSection />
             <motion.div
                 // ref={goalsRef}
@@ -45,7 +52,7 @@ const HomePage = (props: PropTypes) => {
                 <GoalsSection />
             </motion.div>
             <motion.div
-                // ref={goalsRef}
+                ref={navAnimateRef}
                 variants={{
                     initial: { opacity: 0, y: "100" },
                     final: { opacity: 1, y: 0 },

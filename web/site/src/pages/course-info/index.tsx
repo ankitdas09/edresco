@@ -21,7 +21,7 @@ const CourseInfoPage = (props: PropTypes) => {
     return (
         <section className="">
             <ScrollToTop />
-            <NavBar />
+            <NavBar variant="white" />
             {/* <Space amt={60} /> */}
 
             {!allPagesMeta.includes(location.hash.toLowerCase()) ? (

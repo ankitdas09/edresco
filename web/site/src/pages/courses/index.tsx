@@ -15,7 +15,7 @@ const CoursePage = (props: PropTypes) => {
     return (
         <section className="bg-blue">
             <ScrollToTop />
-            <NavBar />
+            <NavBar variant="white" />
             <Space amt={30} />
             <CoursesDescSection />
             <Footer />

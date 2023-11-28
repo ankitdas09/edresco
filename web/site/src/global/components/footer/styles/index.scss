@@ -2,7 +2,7 @@
   background-color: #333;
   width: 100%;
   padding: 20px 0;
-
+  color: #fff;
   .logo-bgwhite{
     width: 120px;
     height:40px;
@@ -11,5 +11,20 @@
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
+  }
+  .footer-middle{
+    .col{
+      margin-right: 20px;
+    }
+    ul{
+      li{
+        a{
+          // text-decoration: none;
+          color: #ffffffb8;
+          font-weight: 300;
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
 }

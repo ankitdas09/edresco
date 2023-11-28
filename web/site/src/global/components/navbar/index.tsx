@@ -3,12 +3,21 @@ import Button from "../btn";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const NavBar = () => {
+interface propTypes {
+    variant?: "white" | "beige";
+}
+
+const NavBar = (props: propTypes) => {
     const location = useLocation();
     const navigate = useNavigate();
     const [navopen, setNavopen] = useState(false);
     return (
-        <nav>
+        <nav
+            style={{
+                backgroundColor: props.variant && props.variant === "white" ? "#fff" : "#FDF8EE",
+                transition: "background-color 800ms",
+            }}
+        >
             <div className="nav-flex">
                 <div className="nav-left">
                     <div className="logo" onClick={() => navigate("/")}></div>

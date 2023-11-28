@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import Heading from "../heading";
 import Space from "../space";
 import "./styles/index.scss";
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="container flex justify-space">
-                <div className="footer-left">
+            <div className="container flex column-on-mobile">
+                <div className="footer-left flex-2 margin-top-mobile">
                     <div className="logo-bgwhite"></div>
                     <Space amt={10} />
                     <Heading
@@ -34,8 +35,64 @@ const Footer = () => {
                         color="#fff"
                     />
                 </div>
-                <div className="footer-middle"></div>
-                <div className="footer-right"></div>
+                <div className="footer-middle flex column-on-mobile margin-top-mobile">
+                    <div className="col">
+                        <Heading
+                            text="Navigation"
+                            fontWeight={400}
+                            font="PT Sans"
+                            size="1rem"
+                            maxWidth={400}
+                            color="#fff"
+                            // underline={true}
+                        />
+                        <Space amt={5} />
+                        <ul>
+                            <li>
+                                <Link to={"/"}>Home</Link>
+                            </li>
+                            <li>
+                                <Link to={"/about"}>About</Link>
+                            </li>
+                            <li>
+                                <Link to={"/courses"}>Courses</Link>
+                            </li>
+                            <li>
+                                <Link to={"/scholarship"}>Scholarship</Link>
+                            </li>
+                            <li>
+                                <Link to={"/contact"}>Contact</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="col">
+                        <Heading
+                            text="Company"
+                            fontWeight={400}
+                            font="PT Sans"
+                            size="1rem"
+                            maxWidth={400}
+                            color="#fff"
+                            // underline={true}
+                        />
+                        <Space amt={5} />
+                        <ul>
+                            <li>
+                                <Link to={"/"}>About Us</Link>
+                            </li>
+                            <li>
+                                <Link to={"/about"}>Careeers</Link>
+                            </li>
+                            <li>
+                                <Link to={"/courses"}>Blogs</Link>
+                            </li>
+                            <li>
+                                <Link to={"/scholarship"}>Privacy Policy</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {/* <div className="footer-right flex-1">hi</div> */}
             </div>
         </footer>
     );

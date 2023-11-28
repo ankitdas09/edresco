@@ -19,7 +19,7 @@ const HeroSection = () => {
     return (
         <div
             style={{
-                paddingTop: "40px",
+                paddingTop: "15px",
                 backgroundColor: "#FDF8EE",
                 paddingBottom: "190px",
             }}
