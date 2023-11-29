@@ -125,7 +125,7 @@ const ScholarshipPage = (props: PropTypes) => {
                 </div>
             </div>
             <Space amt={30} />
-            <div className="benefits-container">
+            <div className="benefits-container container">
                 <div className="container flex justify-center align-center">
                     <Heading
                         text="Benefits for Students in Edresco (through E.A.S.T.)"

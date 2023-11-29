@@ -34,6 +34,29 @@ const Footer = () => {
                         maxWidth={400}
                         color="#fff"
                     />
+                    <Space amt={10} />
+                    <div className="socials flex">
+                        <div className="social-icon">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="socials/facebook.png" alt="" className="img-fluid" />
+                            </a>
+                        </div>
+                        <div className="social-icon">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="socials/instagram.png" alt="" className="img-fluid" />
+                            </a>
+                        </div>
+                        <div className="social-icon">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="socials/twitter_new.png" alt="" className="img-fluid" />
+                            </a>
+                        </div>
+                        {/* <div className="social-icon">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="socials/twitter_new.png" alt="" className="img-fluid" />
+                            </a>
+                        </div> */}
+                    </div>
                 </div>
                 <div className="footer-middle flex column-on-mobile margin-top-mobile">
                     <div className="col">
