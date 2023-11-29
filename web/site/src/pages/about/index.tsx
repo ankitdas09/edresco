@@ -7,6 +7,7 @@ import Footer from "../../global/components/footer";
 import ScrollToTop from "../../scrollToTop";
 import Heading from "../../global/components/heading";
 import { motion } from "framer-motion";
+
 interface PropTypes {
     width: number;
     height: number;

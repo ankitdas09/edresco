@@ -63,6 +63,28 @@ function App() {
     return (
         <>
             <RouterProvider router={router}></RouterProvider>
+            {/* <Route
+                    path="/"
+                    element={<HomePage width={screenSize.width} height={screenSize.height} />}
+                />
+                <Route
+                    path="/about"
+                    element={<AboutPage width={screenSize.width} height={screenSize.height} />}
+                />
+                <Route
+                    path="/contact"
+                    element={<ContactPage width={screenSize.width} height={screenSize.height} />}
+                />
+                <Route
+                    path="/scholarship"
+                    element={
+                        <ScholarshipPage width={screenSize.width} height={screenSize.height} />
+                    }
+                />
+                <Route
+                    path="/courses"
+                    element={<CoursePage width={screenSize.width} height={screenSize.height} />}
+                /> */}
         </>
     );
 }

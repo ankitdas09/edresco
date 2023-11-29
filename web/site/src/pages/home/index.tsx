@@ -27,7 +27,9 @@ const HomePage = (props: PropTypes) => {
             setVariant("beige");
         }
     }, [navAnimateTriggerInView]);
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <section
             style={{

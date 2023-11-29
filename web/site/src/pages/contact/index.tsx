@@ -6,6 +6,7 @@ import ScrollToTop from "../../scrollToTop";
 import Heading from "../../global/components/heading";
 
 import Button from "../../global/components/btn";
+
 interface PropTypes {
     width: number;
     height: number;
@@ -23,6 +24,7 @@ const contactDetails = [
 
 const ContactPage = (props: PropTypes) => {
     console.log(props);
+
     return (
         <section className="">
             <ScrollToTop />
@@ -132,14 +134,14 @@ const ContactPage = (props: PropTypes) => {
                         <div className="branch-details">
                             <Space amt={10} />
                             <Heading
-                                text="Branch 1"
+                                text="Hajo Branch"
                                 font="PT Sans"
                                 fontWeight={600}
                                 size="1.05rem"
                                 maxWidth={"80%"}
                             />
                             <Heading
-                                text="2nd floor,Arunodoi Path, Srimantapur Guwahati, Kamrup Metro, Assam, 781032 India"
+                                text="Hajo-Barpeta Road, Near Axis Bank, Hajo, Kamrup, 781102"
                                 fontWeight={400}
                                 font="PT Sans"
                                 size="1rem"
@@ -162,14 +164,14 @@ const ContactPage = (props: PropTypes) => {
                         <div className="branch-details">
                             <Space amt={10} />
                             <Heading
-                                text="Branch 2"
+                                text="Mukalmua Branch"
                                 font="PT Sans"
                                 fontWeight={600}
                                 size="1.05rem"
                                 maxWidth={"80%"}
                             />
                             <Heading
-                                text="2nd floor,Arunodoi Path, Srimantapur Guwahati, Kamrup Metro, Assam, 781032 India"
+                                text="Vidyapur Path, Near Barkhetri College, Mukalmua, Nalbari, 781126"
                                 fontWeight={400}
                                 font="PT Sans"
                                 size="1rem"

@@ -37,25 +37,31 @@ const Footer = () => {
                     <Space amt={10} />
                     <div className="socials flex">
                         <div className="social-icon">
-                            <a href="https://www.facebook.com" target="_blank">
+                            <a
+                                href="https://www.facebook.com/profile.php?id=100093530901779"
+                                target="_blank"
+                            >
                                 <img src="socials/facebook.png" alt="" className="img-fluid" />
                             </a>
                         </div>
                         <div className="social-icon">
-                            <a href="https://www.facebook.com" target="_blank">
+                            <a href="https://www.instagram.com/_edresco_/" target="_blank">
                                 <img src="socials/instagram.png" alt="" className="img-fluid" />
                             </a>
                         </div>
                         <div className="social-icon">
-                            <a href="https://www.facebook.com" target="_blank">
+                            <a href="https://twitter.com/edresco24" target="_blank">
                                 <img src="socials/twitter_new.png" alt="" className="img-fluid" />
                             </a>
                         </div>
-                        {/* <div className="social-icon">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <img src="socials/twitter_new.png" alt="" className="img-fluid" />
+                        <div className="social-icon">
+                            <a
+                                href="https://www.youtube.com/channel/UCMpk0YyVmtsxwTOUFVxt7Xg"
+                                target="_blank"
+                            >
+                                <img src="socials/youtube.png" alt="" className="img-fluid" />
                             </a>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
                 <div className="footer-middle flex column-on-mobile margin-top-mobile">

@@ -16,6 +16,7 @@ interface PropTypes {
 
 const CourseInfoPage = (props: PropTypes) => {
     console.log(props);
+
     const location = useLocation();
     const allPagesMeta = ["#disha", "#parishram", "#fresher", "#target"];
     return (

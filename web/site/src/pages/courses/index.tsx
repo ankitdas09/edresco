@@ -5,6 +5,7 @@ import Space from "../../global/components/space";
 import Footer from "../../global/components/footer";
 import CoursesDescSection from "./components/courses-desc";
 import ScrollToTop from "../../scrollToTop";
+
 interface PropTypes {
     width: number;
     height: number;
@@ -12,6 +13,7 @@ interface PropTypes {
 
 const CoursePage = (props: PropTypes) => {
     console.log(props);
+
     return (
         <section className="bg-blue">
             <ScrollToTop />

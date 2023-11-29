@@ -6,6 +6,7 @@ import ScrollToTop from "../../scrollToTop";
 import Heading from "../../global/components/heading";
 import ObjectiveCard from "./components/objective-card";
 import Button from "../../global/components/btn";
+
 interface PropTypes {
     width: number;
     height: number;
