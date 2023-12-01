@@ -14,16 +14,30 @@ const RegisterPage = () => {
     function submitForm(e) {
         setBtnDisabled(true);
         e.preventDefault();
-        const phoneNumber = e.target[0].value;
+        console.log(e);
+        const phoneNumber: string = e.target[0].value;
         const email = e.target[1].value;
         const name = e.target[2].value;
-        const currentCourse = e.target[3].value;
+        const board = e.target[3].value;
+        const center = e.target[4].value;
+        const currentCourse = e.target[5].value;
+        const preparation = e.target[6].value;
+
+        if (phoneNumber.length !== 10) {
+            alert("Invalid Phone number");
+            setBtnDisabled(false);
+            return;
+        }
+        // console.log(phoneNumber, email, name, board, center, currentCourse, preparation);
 
         const promise = databases.createDocument(databaseId, collectionId, ID.unique(), {
             phoneNumber,
             email,
             name,
             currentCourse,
+            board,
+            center,
+            preparation,
         });
 
         promise.then(
@@ -106,15 +120,6 @@ const RegisterPage = () => {
                                 required
                                 className="input-main"
                             />
-                            {/* <input
-                                type="text"
-                                placeholder="Current course (9, 10, dropper etc)"
-                                name=""
-                                id=""
-                                required
-                                className="input-main"
-                            /> */}
-                            {/* <DropDownMenu /> */}
                             <select name="board" id="board" className="input-main" required>
                                 <option value="" disabled selected>
                                     Board
@@ -157,8 +162,8 @@ const RegisterPage = () => {
                                     Preparation
                                 </option>
                                 <option value="board">Board</option>
-                                <option value="hajo">Medical</option>
-                                <option value="mukulmua">Engineering</option>
+                                <option value="medical">Medical</option>
+                                <option value="engineering">Engineering</option>
                             </select>
                             <Space amt={10} />
                             {!btnDisabled && (
